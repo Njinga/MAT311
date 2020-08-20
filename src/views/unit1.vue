@@ -138,7 +138,7 @@
                 </div>
 
                 <div class=" mt-2" style="background-color:#e2e3e5">
-                    <span class="font-weight-bold"> Definition 1.4 </span>Consider the following approximations
+                    <span class="font-weight-bold"> Example 1.1 </span>Consider the following approximations
                     <ol style="list-style:lower-roman;">
                         <li>
                             <span v-katex="'~~x = 2347.59~~~~~~~~{\\rm by}~~~~~~~\\tilde{x} = 2347.6'"></span>
@@ -363,7 +363,7 @@
                     <strong>Example 1.2</strong>
                     Compare the results of calculating <span v-katex="'f(500)'"></span> and <span v-katex="'g(500)'"></span> using six digits and rounding.
                     The functions are
-                    <div v-katex:display="'f(x) = x\\left(\\sqrt{x+1} - \\sqrt{x}\\right)\\;\\;\\;\\;\\text{and}\\;\\;\\;\\;g(x) = \\frac{x}{\\sqrt{x+1}+\\sqrt{x}}'"></div>
+                    <div v-katex:display="'f(x) = x\\left(\\sqrt{x+1} - \\sqrt{x}\\right)\\;\\;\\;\\;\\text{and}\\;\\;\\;\\;g(x) = \\displaystyle{\\frac{x}{\\sqrt{x+1}+\\sqrt{x}}}'"></div>
                 </div>
                 Answer: For the first function <span v-katex="'f(x),'"></span>
                 <div v-katex:display="'f(500) = 500 (\\sqrt{501} - \\sqrt{500})~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
