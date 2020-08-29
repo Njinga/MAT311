@@ -8,13 +8,9 @@ If you want to go through the code we have Chapters of the MAT 311 book defined 
 book in defined as Unit 1 here. These units are found in /src/views
 
 ## Collaborators
-* Njinga Nkosi 
-** email: .[nkosinjinga@gmail.com].()
-** GitHub: .[https://github.com/Njinga].()
+* Njinga Nkosi [nkosinjinga@gmail.com]() [https://github.com/Njinga]()
 
 
 ## Supervisor
-* Prof.S.S. Motsa 
+* Prof.S.S. Motsa [sandilemotsa@gmail.com]()
 
-** email: .[sandilemotsa@gmail.com]
-**GitHub:https://github.com/sandilemotsa
