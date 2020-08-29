@@ -12,5 +12,5 @@ book in defined as Unit 1 here. These units are found in /src/views
 
 
 ## Supervisor
-* Prof.S.S. Motsa [sandilemotsa@gmail.com]()
+* Prof.S.S. Motsa [sandilemotsa@gmail.com]() [https://github.com/sandilemotsa]()
 
