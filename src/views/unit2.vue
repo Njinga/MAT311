@@ -1493,11 +1493,35 @@
             border-color: #0f0f0f;
         }
 
-        .note.note-exmaple {
-            background-color: #e2e3e5;
-        }
+    .theorem {
+        background-color: #e2e3e5;
+        border: 2px solid;
+        border-color:coral;
+        
+    }
+    theorem-color {
+        color:coral;
+    }
+
 
     deep {
         font-weight: bold;
+
+    }
+
+    .algorithm {
+      
+        border: 1px solid;
+        border-color: black;
+        text-align:center;
+    }
+
+    .th {
+        margin: 0px;
+        border: 1px solid;
+        border-color: black;
+    }
+    move-right {
+        margin-left:20px;
     }
 </style>
