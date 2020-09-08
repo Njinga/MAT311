@@ -3,7 +3,7 @@
         <section class="py-3 px-3 mx-4" style="background-color:#fff3e0">
             <h3 class=" h3-responsive font-weight-bold"> 1. Errors</h3>
         </section>
-        <!--Chapter 1.1 start here-->
+        <!--Section 1.1-->
         <section class="dark-grey-text mb-4 pt-3 px-3 mx-4">
             <h4 class="h4-responsive pt-2 font-weight-bold blue-text">
                 1.1 Sources of errors
@@ -13,46 +13,36 @@
                 <p>
                     Errors may be categorized as follows:
                     <ol>
-                        <li>
+                        <li style="margin-bottom:10px">
                             <strong>Modelling Errors:</strong>Mathematical equations which are used to represent physical phenomena
                             are known as <i>mathematical models</i>. Mathematical formulations are seldom
                             exactly descriptive of any real situation, but only of more or less idealized models. The
                             modelling itself introduces errors into the mix. Mathematical equations can be solved
                             exactly but the solution differs from physical reality that is being modelled.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             <strong>Human Errors:</strong>This classification includes all aspects of human intervention which
                             cause errors in the calculation e.g arithmetic errors, programming errors, etc.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             <strong>Measurement Errors:</strong>In measuring observable phenomena, errors are introduced by
                             measuring devices and the manner in which data is collected.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             <strong>Machine Errors:</strong>Theway in which computers represent numbers internally introduces
                             errors into the mix.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             <strong>Mathematical Approximations:</strong> Some mathematical calculations simply cannot be
                             given exactly. Instead an approximation may be used. Examples of mathematical approximation
                             are Taylor series representation e.g
                             <div class="row">
                                 <div class="col">
-                                    <div v-katex:display="'\\cos x \\approx 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!}+...,'"></div>
+                                    <div v-katex:display="'\\begin{aligned}\\cos x \&\\approx 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} \\ldots, ~~~~~~~\&(1.1)\\\\\\frac{1}{1-x}\&= 1 + x + x^2 + \\ldots \& (1.2) \\end{aligned}'"></div>
                                 </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.1)'"></div>
-                                </div>
+                                
                             </div>
 
-                            <div class="row">
-                                <div class="col">
-                                    <div v-katex:display="'\\frac{1}{1-x} = 1 + x + x^2+...'"></div>
-                                </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.2)'"></div>
-                                </div>
-                            </div>
                             The above approximations are good when <span v-katex="'x'"></span> is small but are very crude when <span v-katex="'x'"></span> is large.
                         </li>
 
@@ -68,20 +58,11 @@
                     to <span v-katex="'x'"></span>. The error of <span v-katex="'\\tilde{x}'"></span> as an approximation to <span v-katex="'x'"></span> is defined as
                     <div class="row text-center mt-2">
                         <div class="col">
-                            <div v-katex:display="'\\text{Error = exact value - approximate value}'"></div>
+                            <div v-katex:display="'\\begin{aligned}{\\rm Error} \&= {\\rm exact~ value - approximate~ value}~~~~~~~~~~~~~~~\& (1.3)\\\\{\\rm Error} \&= x - \\tilde{x} \& (1.4) \\end{aligned}'"></div>
                         </div>
-                        <div class="col">
-                            <div v-katex:display="'(1.3)'"></div>
-                        </div>
+                       
                     </div>
-                    <div class="row text-center mt-2">
-                        <div class="col">
-                            <div v-katex:display="'\\text{Error} = x-\\tilde{x}'"></div>
-                        </div>
-                        <div class="col">
-                            <div v-katex:display="'(1.4)'"></div>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div class="note note-definition mt-2">
@@ -106,20 +87,11 @@
 
                     <div class="row text-center mt-2">
                         <div class="col">
-                            <div v-katex:display="'\\text{Relative Error}= \\frac{|\\text{exact value}-\\text{approximate value}|}{|\\text{exact value}|}'"></div>
+                            <div v-katex:display="'\\begin{aligned}{\\rm Relative~ Error} \&= \\frac{\\rm |exact~ value - approximate~ value|}{\\rm |exact ~value|}~~~~~~~~~~\&(1.6)\\\\{\\rm Relative~ Error} \&= \\frac{|x - \\tilde{x}|}{|x|}\&(1.7)\\end{aligned}'"></div>
                         </div>
-                        <div class="col">
-                            <div v-katex:display="'(1.6)'"></div>
-                        </div>
+                       
                     </div>
-                    <div class="row text-center mt-2">
-                        <div class="col">
-                            <div v-katex:display="'\\text{Relative Error}= \\frac{|x-\\tilde{x}|}{|x|}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                        </div>
-                        <div class="col">
-                            <div v-katex:display="'(1.7)'"></div>
-                        </div>
-                    </div>
+                  
                 </div>
 
                 <div class="note note-definition mt-2">
@@ -137,7 +109,8 @@
                     </div>
                 </div>
 
-                <div class=" mt-2" style="background-color:#e2e3e5">
+                <!--Example 1.1-->
+                <div class=" my-3 p-3"  style="background-color:#e2e3e5">
                     <span class="font-weight-bold"> Example 1.1 </span>Consider the following approximations
                     <ol style="list-style:lower-roman;">
                         <li>
@@ -155,30 +128,12 @@
                             <!--row 1-->
                             <div class="row">
                                 <div class="col">
-                                    <div v-katex:display="'\\rm {Absolute~ error} = |2347.59 - 2347.6| = 0.01 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
+                                    <div v-katex:display="'\\begin{aligned}{\\rm Absolute~ error} \&= |2347.59 - 2347.6| = 0.01 ~~~~~~~~~~\&(1.9)\\\\ {\\rm Relative~ error} \&= \\frac{|2347.59 - 2347.6|}{2347.59} = \\frac{0.01}{2347.59} = 0.000004259 \&(1.10)\\\\ {\\rm Percentage ~error} \&= 100\\frac{|2347.59 - 2347.6|}{2347.59} = 100\\frac{0.01}{2347.59} = 0.0004259 \&(1.11) \\end{aligned}'"></div>
                                 </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.9)'"></div>
-                                </div>
+                              
                             </div>
-                            <!--row 2-->
-                            <div class="row">
-                                <div class="col">
-                                    <div v-katex:display="'\\rm {Relative~ error} = \\frac{|2347.59 - 2347.6|}{2347.59} = \\frac{0.01}{2347.59} = 0.000004259~~~~~~~~~~~~ '"></div>
-                                </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.10)'"></div>
-                                </div>
-                            </div>
-                            <!--row 3-->
-                            <div class="row">
-                                <div class="col">
-                                    <div v-katex:display="'\\rm {Percentage ~error} = 100\\frac{|2347.59 - 2347.6|}{2347.59} = 100\\frac{0.01}{2347.59} = 0.0004259'"></div>
-                                </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.11)'"></div>
-                                </div>
-                            </div>
+                           
+                           
                         </li>
 
                         <li>
@@ -186,38 +141,20 @@
                             <!--row 1-->
                             <div class="row">
                                 <div class="col">
-                                    <div v-katex:display="'\\rm {Absolute~ error} = |0.02 - 0.01| = 0.01 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
+                                    <div v-katex:display="'\\begin{aligned}{\\rm Absolute~ error} \&= |0.02 - 0.01| = 0.01 ~~~~~~~~~~~~~\&(1.12)\\\\{\\rm Relative~ error} \&= \\frac{|0.02 - 0.01|}{0.02} = \\frac{0.01}{0.02} = 0.5\&(1.13) \\\\{\\rm Percentage ~error} \&= 100\\frac{|0.02 - 0.01|}{0.02} = 100\\frac{0.01}{0.02} = 50\&(1.14) \\end{aligned}'"></div>
                                 </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.12)'"></div>
-                                </div>
+                                
                             </div>
-                            <!--row 2-->
-                            <div class="row">
-                                <div class="col">
-                                    <div v-katex:display="'\\rm{ Relative~ error} = \\frac{|0.02 - 0.01|}{0.02} = \\frac{0.01}{0.02} = 0.5~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ '"></div>
-                                </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.13)'"></div>
-                                </div>
-                            </div>
-                            <!--row 3-->
-                            <div class="row">
-                                <div class="col">
-                                    <div v-katex:display="'{\\rm Percentage ~error} = 100\\frac{|0.02 - 0.01|}{0.02} = 100\\frac{0.01}{0.02} = 50~~~~~~~~~~~~~~~~~~~~~'"></div>
-                                </div>
-                                <div class="col">
-                                    <div v-katex:display="'(1.14)'"></div>
-                                </div>
-                            </div>
+                        
                         </li>
                     </ol>
 
                 </div>
+                <!--./Example 1.1-->
             </div>
         </section>
-        <!--/Chapter 1.1 Start here -->
-        <!--Chapter 1.2 start here-->
+        <!--./Section 1.1 -->
+        <!--Section 1.2-->
         <section class="dark-grey-text mb-4 pt-3 px-3 mx-4" id="c-1-2">
             <h4 class="h4-responsive pt-2 font-weight-bold blue-text">
                 1.2 Error Analysis
@@ -227,7 +164,7 @@
                 A computer's representation of real numbers is limited to the fixed precision of the mantissa. True values are sometimes not stored exactly by a computer's representation. This is called <strong>round-off error</strong>.
                 The actual number stored in a computer may undergo chopping or rounding of the last digit.
 
-                <!--Chapter 1.2.1 start here-->
+                <!--Section 1.2.1-->
                 <div class="mt-4" id="c-1-2-1">
                     <h4 class="h4-responsive">1.2.1 Significant digits</h4>
                     <div class="note note-definition">
@@ -239,10 +176,10 @@
                     <div class="ml-3 mt-2">
                         <h4 class="h4-responsive my-4">Basic Rules of significant digits</h4>
                         <ol>
-                            <li>
+                            <li style="margin-bottom:10px">
                                 All nonzero digits are significant.
                             </li>
-                            <li>
+                            <li style="margin-bottom:10px">
                                 All zeroes between significant digits are significant.
                             </li>
                             <li>
@@ -253,33 +190,33 @@
                     </div>
                     Significant figure are the "interesting" or "important" figures e.g
                     <ul>
-                        <li>
+                        <li style="margin-bottom:10px">
                             3.14159 has six significant digits (all the numbers give you useful information)
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             1000 has one significant digit (only the 1 is interesting; you don't know anything for sure about the hundreds, tens, or units places; the zeroes may just be placeholders;
                             they may have rounded something off to get this value)
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             1000.0 has five significant digits (the ".0" tells us something interesting about the presumed accuracy of the measurement being made: that the measurement is accurate
                             to the tenths place, but that there happen to be zero tenths)
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             0.00035 has two significant digits (only the 3 and 5 tell us something; the other zeroes are placeholders,
                             only providing information about relative size)
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             0.000350 has three significant digits (that last zero tells us that the measurement was made accurate to
                             that last digit, which just happened to have a value of zero)
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             1006 has four significant digits (the 1 and 6 are interesting, and we have to count the zeroes,
                             because they're between the two interesting numbers)
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             560 has two significant digits (the last zero is just a placeholder)
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             560.0 has four significant digits (the zero in the tenths place means that
                             the measurement was made accurate to the tenths place, and that there just
                             happen to be zero tenths; the 5 and 6 give useful information, and the other
@@ -289,8 +226,8 @@
 
                 </div>
             </div>
-            <!--./Chapter 1.2.1 end here-->
-            <!--Chapter 1.2.2 start here-->
+            <!--./Section 1.2.1-->
+            <!--Section 1.2.2-->
             <div class="mt-4" id="c-1-2-2">
                 <h4 class="h4-responsive">1.2.2 Chopping and Rounding Off</h4>
                 Consider any real number <span v-katex="'R'"></span> that is expressed in a <em>normalized decimal form</em>:
@@ -326,18 +263,14 @@
                 <div v-katex:display="' R = \\frac{22}{7} =    3.142857142857143 '"></div>
 
                 has the following six digit representations:
-                <ul style="list-style:none;">
-                    <li>
-                        <div v-katex:display="'fl_{\\rm chop}(R) = 0.314285 \\times 10^{1}'"></div>
-                    </li>
-                    <li>
-                        <div v-katex:display="'fl_{\\rm round}(R) = 0.314286 \\times 10^{1}'"></div>
-                    </li>
-                </ul>
+               
+                        <div v-katex:display="'\\begin{aligned} fl_{\\rm chop}(R)\&= 0.314285 \\times 10^{1}\\\\fl_{\\rm round}(R)\&= 0.314286 \\times 10^{1}\\end{aligned}'"></div>
+                  
+               
                 For common purposes the chopping and rounding would be written as 3.14285 and 3.14286 respectively.
             </div>
-            <!--./Chapter 1.2.2 end here-->
-            <!--Chapter 1.2.3 start here-->
+            <!--./Section 1.2.2 -->
+            <!--Section 1.2.3 -->
             <div class="mt-4" id="c-1-2-3">
                 <h4 class="h4-responsive">1.2.3 Loss of Significance</h4>
                 <p>
@@ -359,64 +292,70 @@
                 of precision. This phenomenon is called <strong>loss of significance </strong>
                 or <strong>subtractive cancellation</strong>.
 
-                <div style="background-color: #e2e3e5" class="mt-3 mb-4">
+
+                <!--Example 1.2-->
+                <div style="background-color: #e2e3e5" class="my-4 p-3">
                     <strong>Example 1.2</strong>
                     Compare the results of calculating <span v-katex="'f(500)'"></span> and <span v-katex="'g(500)'"></span> using six digits and rounding.
                     The functions are
                     <div v-katex:display="'f(x) = x\\left(\\sqrt{x+1} - \\sqrt{x}\\right)\\;\\;\\;\\;\\text{and}\\;\\;\\;\\;g(x) = \\displaystyle{\\frac{x}{\\sqrt{x+1}+\\sqrt{x}}}'"></div>
                 </div>
+                <!--./Example 1.2 -->
                 Answer: For the first function <span v-katex="'f(x),'"></span>
-                <div v-katex:display="'f(500) = 500 (\\sqrt{501} - \\sqrt{500})~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                <div v-katex:display="'~~~~~~~~~=500 (22.3830 - 22.3607) = 500(0.0223) = 11.1500'"></div>
+                <div v-katex:display="'\\begin{aligned} f(500)\&=500 (\\sqrt{501} - \\sqrt{500})\\\\      \&=500 (22.3830 - 22.3607) = 500(0.0223) = 11.1500 \\end{aligned}'"></div>
+                
                 for <span v-katex="'g(x),'"></span>
-                <div v-katex:display="'g(500) = \\frac{500}{\\sqrt{501} + \\sqrt{500}}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                <div v-katex:display="'~~~~~~~~~~~~~~~~~~=\\frac{500}{22.3830 + 22.3607} = \\frac{500}{44.7437} = 11.1748'"></div>
-
+                <div v-katex:display="'\\begin{aligned} g(500)\&= \\frac{500}{\\sqrt{501} + \\sqrt{500}}\\\\      \&= \\frac{500}{22.3830 + 22.3607} = \\frac{500}{44.7437} = 11.1748 \\end{aligned}'"></div>
+               
                 <div class="mt-4">
                     Note that the second function <span v-katex="'g(x),'"></span> is algebraically equivalent to <span v-katex="'f(x),'"></span> as shown by the
                     computation
-                    <div v-katex:display="'f(x) = \\frac{x(\\sqrt{x+1}-\\sqrt{x})(\\sqrt{x+1}+\\sqrt{x})}{(\\sqrt{x+1}+\\sqrt{x})}'"></div>
-                    <div v-katex:display="'  = \\frac{x}{(\\sqrt{x+1}-\\sqrt{x})} = g(x)~~~~~~~'"></div>
+                   
+                    <div v-katex:display="'\\begin{aligned} f(x)\&= \\frac{x(\\sqrt{x+1}-\\sqrt{x})(\\sqrt{x+1}+\\sqrt{x})}{(\\sqrt{x+1}+\\sqrt{x})}\\\\    \&= \\frac{x}{(\\sqrt{x+1}-\\sqrt{x})} = g(x) \\end{aligned}'"></div>
 
 
                     The answer, <span v-katex="'g(500) = 11.1748'"></span>, involves less error and is the same as that obtained by rounding the true answer <span v-katex="'11.174755300747198...'"></span> to six digits.
-
-                    <div style="background-color: #e2e3e5;" class="my-4">
+                    <!--Example 1.3-->
+                    <div style="background-color: #e2e3e5;" class="my-4 p-3">
                         <strong> Example 1.3</strong> Compare the results of calculating <span v-katex="'f(0.01)'"></span> and <span v-katex="'P(0.01) '"></span> using six digits and rounding, where
                         <div v-katex:display="' f(x) = \\frac{e^{x} - 1 - x}{x^2}\\;\\;\\;\\;\\text{and}\\;\\;\\;\\; P(x) = \\frac{1}{2} + \\frac{x}{6} + \\frac{x^2}{24}.'"></div>
                         Answer:The function <span v-katex="'P(x)'"></span> is the Taylor polynomial of degree <span v-katex="'n = 2'"></span> for <span v-katex="'f(x)'"></span> expanded about <span v-katex="'x=0'"></span>.
                         For the first function
                         <div v-katex:display="'f(0.01) = \\frac{e^{0.01} - 1 - 0.01}{(0.01)^2} =\\frac{1.010050 - 1 - 0.01}{0.001} = 0.5.'"></div>
                         For the second function
-                        <div v-katex:display="' P(0.01) = \\frac{1}{2} + \\frac{0.01}{6} + \\frac{0.0001}{24}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                        <div v-katex:display="'= 0.5  + 0.001667 + 0.000004 = 0.501671'"></div>
+                        
+                        <div v-katex:display="'\\begin{aligned} P(0.01) \&= \\frac{1}{2} + \\frac{0.01}{6} + \\frac{0.0001}{24}\\\\         \&= 0.5  + 0.001667 + 0.000004 = 0.501671 \\end{aligned}'"></div>
                         The answer <span v-katex="'P(0.01) = 0.501671'"></span> contains less error and is the same as that obtained by rounding the true answer <span v-katex="'0.50167084168057542'"></span> ... to six digits.
 
                     </div>
-                    <div style="background-color: #e2e3e5;" class="my-4">
+                    <!--./Example 1.3-->
+                    <!--Example 1.4-->
+                    <div style="background-color: #e2e3e5;" class="my-4 p-3">
                         <strong>Example 1.4</strong> Let <span v-katex="'P(x) = x^3 - 3x^2 + 3x - 1'"></span> and <span v-katex="'Q(x) = ((x-3)x + 3)x - 1'"></span>. Use
                         three-digit rounding arithmetic to compute approximations to <span v-katex="'P(2.19)'"></span> and <span v-katex="'$Q(2.19)$'"></span>. Compare
                         them with the true values, <span v-katex="'P(2.19) = Q(2.19) = 1.685159'"></span>
-                        <div v-katex:display="'P(2.19)  \\approx  (2.19)^3 - 3(2.19)^2 + 3(2.19) - 1'"></div>
-                        <div v-katex:display="'~~~~~~~~~~= 10.5 - 14.4  + 6.57 - 1 = 1.67'"></div>
-                        <div v-katex:display="'Q(2.19) \\approx ((2.19 - 3)2.19 + 3) - 1 = 1.69'"></div>
+                        <div v-katex:display="'\\begin{aligned}P(2.19) \& \\approx  (2.19)^3 - 3(2.19)^2 + 3(2.19) - 1 \\\\  \&=10.5 - 14.4  + 6.57 - 1 = 1.67 \\\\  Q(2.19) &\\approx ((2.19 - 3)2.19 + 3) - 1 = 1.69 \\end{aligned}'"></div>
+                        
+                        
                         The errors are <span v-katex="'0.015159'"></span> and <span v-katex="'-0.004841'"></span>, respectively. Thus the approximation <span v-katex="'Q(2.19) \\approx 1.69'"></span> has less error.
                     </div>
+                    <!--./Example 1.4-->
                     The last three examples suggest three different ways of avoiding loss of significance. Sometimes the loss of significance can be avoided by
                     rearranging terms in the function using a known identity from
                     trigonometry or algebra.
-                    <div style="background-color: #e2e3e5;" class="my-4">
-                        <strong>Example 1.5</strong>Refer to Page 62 - 67 of Cheney and Kincaid i.e Chapter 4
+                    <!--Example 1.5-->
+                    <div style="background-color: #e2e3e5;" class="my-4 p-3">
+                        <strong>Example 1.5 </strong> Refer to Page 62 - 67 of Cheney and Kincaid i.e Chapter 4
                         from Example 4.5
                     </div>
-
+                    <!--./Example 1.5-->
                 </div>
             </div>
-            <!--./Chapter 1.2.3 end here-->
+            <!--./Section  1.2.3-->
         </section>
-        <!--./Chapter 1.2 end here-->
-        <!--Exercises start here-->
-        <section class="dark-grey-text mb-4 pt-3 px-3 mx-4" style="background-color:#fff3e0" id="ex-1">
+        <!--./Section 1.2-->
+        <!--Exercises -->
+        <section class="dark-grey-text mb-4 py-3 px-3 mx-4 " style="background-color:#fff3e0" id="ex-1">
             <h4 class="h4-responsive">Exercise1.1  <strong>Error analysis</strong></h4>
             <ol>
                 <li>
@@ -471,13 +410,8 @@
                 <li>
                     How can the following functions be re-written to avoid
                     problems due to loss of precision?
-                    <div v-katex:display="'f(x) = \\sqrt{x^2 + 4} - 2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                    <div v-katex:display="'f(x) = 1 - \\cos x~~~\\text{in the vicinity of } x = 0'"></div>
-                    <div v-katex:display="'f(x) = x - \\sin x~~~\\text{in the vicinity of } x = 0'"></div>
-                    <div v-katex:display="'~~~f(x) = e^x - x - 1 ~~~\\text{in the vicinity of } x = 0'"></div>
-                    <div v-katex:display="'f(x) = \\ln(x+1) - \\ln(x)~~~\\text{for large } x~~~~~~~~~'"></div>
-                    <div v-katex:display="'f(x) = \\cos^2(x) - \\sin^2(x)~~~\\text{for } x \\approx \\pi/4~~~~~~~'"></div>
-                    <div v-katex:display="'f(x) = \\sqrt{\\frac{1+\\cos(x)}{2}}~~~\\text{for } x \\approx \\pi~~~~~~~~~~~~~~~~'"></div>
+                    <div v-katex:display="'\\begin{aligned} f(x)\&=\\sqrt{x^2 + 4} - 2\\\\f(x)\ &= 1 - \\cos x~~~\\text{in the vicinity of } x = 0 \\\\f(x) \&= x - \\sin x~~~\\text{in the vicinity of }x = 0 \\\\f(x) \&=e^x - x - 1 ~~~\\text{in the vicinity of } x = 0\\\\ f(x) \&= \\ln(x+1) - \\ln(x)~~~\\text{for large }x \\\\ f(x) \&= \\cos^2(x) - \\sin^2(x)~~~\\text{for }x \\approx \\pi/4 \\\\ f(x) \&= \\sqrt{\\frac{1+\\cos(x)}{2}}~~~\\text{for }x \\approx \\pi \\end{aligned}'"></div>
+                   
                 </li>
                 <li>
                     Find the roots of the following quadratic equation (as accurately as possible) using
@@ -501,7 +435,7 @@
             </ol>
         </section>
 
-        <!--./Exercises end here-->
+        <!--./Exercises-->
 
     </div>
 
