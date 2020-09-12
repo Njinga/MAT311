@@ -436,7 +436,7 @@
         </section>
 
         <!--./Exercises-->
-
+        
     </div>
 
 </template>
@@ -447,8 +447,6 @@
 
     export default {
         name: 'unit1'
-
-
     }
 </script>
 <style scoped>

@@ -3,7 +3,7 @@
         <section class="py-3 px-3 mx-4" style="background-color:#fff3e0">
             <h3 class=" h3-responsive font-weight-bold"> 2. Number Representation</h3>
         </section>
-        <!--Chapter 2.1 start here-->
+        <!--Section 2.1 -->
         <section class="dark-grey-text mb-4 pt-3 px-3 mx-4">
             <h4 class="h4-responsive pt-2 font-weight-bold blue-text">
                 2.1 Decimal and Binary system
@@ -13,7 +13,7 @@
                 The number system used on a daily basis is called a <strong>decimal system</strong>.
                 In decimal representation of integers we identify an integer
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.1-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'d_nd_{n-1}\\cdots d_1d_0'"></div>
@@ -22,10 +22,10 @@
                         <div v-katex:display="'(2.1)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.1-->
                 with
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.2-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'d_n10^n + d_{n-1}10^{n-1} + \\cdots + d_1 10^1 + d_0 10^0'"></div>
@@ -34,10 +34,10 @@
                         <div v-katex:display="'(2.2)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.2-->
                 Similarly, an infinite decimal of the form
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.3-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'d_nd_{n-1}\\cdots d_1d_0.d_{-1}d_{-2}d_{-3}\\ldots'"></div>
@@ -46,10 +46,10 @@
                         <div v-katex:display="'(2.3)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.3-->
                 can be represented as
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.4-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'d_n10^n + d_{n-1}10^{n-1} + \\cdots + d_1 10^1 + d_0 10^0 + d_{-1}10^{-1} + d_{-2}10^{-2} + \\ldots'"></div>
@@ -59,37 +59,38 @@
                     </div>
                 </div>
 
+                <!--./Equation 2.4-->
                 where <span v-katex="'d_k'"></span> is an integer from <span v-katex="'0'"></span> to <span v-katex="'9'"></span>, with <span v-katex="'d_n \\neq 0'"></span>. For example,
 
                 <div style="background-color: #e2e3e5" class="mt-3 mb-4 p-3">
                     <deep>Example 2.1</deep>
 
-                    <!--A row with two columns one for the equation the one for the numbering-->
-                    <div class="row">
-                        <div class="col col-sm-6">
-                            <div v-katex:display="'23456 = 2\\times 10^4 + 3\\times 10^3 + 4\\times 10^2 + 5\\times 10^1 + 6 \\times 10^0~~~~~ '"></div>
-                        </div>
-                        <div class="col">
-                            <div v-katex:display="'(2.5)'"></div>
-                        </div>
-                    </div>
+                    <!--Equations 2.5 & 2.6-->
 
 
-                    <!--A row with two columns one for the equation the one for the numbering-->
-                    <div class="row">
-                        <div class="col">
-                            <div v-katex:display="'234.56 = 2\\times 10^2 + 3\\times 10^1 + 4\\times 10^0 + 5\\times 10^{-1} + 6 \\times 10^{-2}'"></div>
-                        </div>
-                        <div class="col">
-                            <div v-katex:display="'(2.6)'"></div>
-                        </div>
+                    <div class="table-responsive" style="width:100%;">
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+
+                                    <th>
+                                        <div v-katex:display="'\\begin{aligned}23456 \&= 2\\times 10^4 + 3\\times 10^3 + 4\\times 10^2 + 5\\times 10^1 + 6 \\times 10^0 ~~~~~~~~~~~\&(2.5)\\\\ 234.56 \&= 2\\times 10^2 + 3\\times 10^1 + 4\\times 10^0 + 5\\times 10^{-1} + 6 \\times 10^{-2}\&(2.6)\\end{aligned}'"></div>
+                                    </th>
+
+
+                                </tr>
+                            </thead>
+
+                        </table>
                     </div>
+                    <!--./Equations 2.5 & 2.6-->
                 </div>
 
                 In general, an <span v-katex="'(n+1)'"></span> digit integer <span v-katex="'I'"></span> can be expressed in base <span v-katex="'b'"></span> as
 
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.7-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'I = (a_na_{n-1}a_{n-2}\\ldots\\ldots a_2a_1a_0)_b'"></div>
@@ -98,7 +99,7 @@
                         <div v-katex:display="'(2.7)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.7-->
                 If <span v-katex="'b = 10'"></span> the digits <span v-katex="'a_j'"></span> can take values between <span v-katex="'0'"></span> and <span v-katex="'9 \\space (a_n \neq 0)'"></span>
 
                 <ul style="list-style:none">
@@ -108,7 +109,7 @@
                     <li>
                         The decimal value of the number (with base <span v-katex="'b'"></span>) given in equation (2.7) is
 
-                        <!--A row with two columns one for the equation the one for the numbering-->
+                        <!--Equation 2.8-->
                         <div class="row">
                             <div class="col">
                                 <div v-katex:display="'I = b^n\\times a_n + b^{n-1}\\times a_{n-1} + \\cdots + b^1 \\times a_1 + b^0 \\times a_0.'"></div>
@@ -117,12 +118,13 @@
                                 <div v-katex:display="'(2.8)'"></div>
                             </div>
                         </div>
+                        <!--./Equation 2.8-->
                     </li>
                 </ul>
 
                 Most computers represent numbers as sums of multiple powers of 2 (a <i>binary</i> system). In a binary system, the mathematical expression of an integer is
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.9-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'I = (a_na_{n-1}a_{n-2}\\ldots\\ldots a_2a_1a_0)_2'"></div>
@@ -131,9 +133,9 @@
                         <div v-katex:display="'(2.9)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.9-->
                 where <span v-katex="'a_i'"></span> is a <i>binary bit</i>, that is 0 or 1. The decimal value of a binary number is
-
+                <!--Equation 2.10-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="' I = 2^na_n + 2^{n-1}a_{n-1} + \\cdots + 2^1a_1 + 2^0a_0 = \\sum_{k=0}^{n} 2^ka_k .'"></div>
@@ -142,10 +144,10 @@
                         <div v-katex:display="'(2.10)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.10-->
                 If the binary number contains a fractional part, i.e is of the form
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.11-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'I = (a_na_{n-1}a_{n-2}\\ldots\\ldots a_2a_1a_0.a_{-1}a_{-2}a_{-3}\\ldots)_2'"></div>
@@ -154,10 +156,10 @@
                         <div v-katex:display="'(2.11)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.11-->
                 it can be represented as
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.12-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'I = 2^na_n + 2^{n-1}a_{n-1} + \\cdots + 2^1a_1 + 2^0a_0 + 2^{-1}a_{-1}+2^{-2}a_{-2} + 2^{-3}a_{-3} + \\ldots '"></div>
@@ -166,23 +168,17 @@
                         <div v-katex:display="'(2.12)'"></div>
                     </div>
                 </div>
-
-
+                <!--./Equation 2.12-->
+                <!--Exapmle 2.2-->
                 <div style="background-color: #e2e3e5" class="mt-3 mb-4 p-3">
                     <deep>Example 2.2</deep>
 
 
-                    <div v-katex:display="'(11001)_2 = 2^4\\cdot 1 + 2^3\\cdot 1 + 2^2\\cdot 0 + 2^1 \\cdot 0 + 2^0\\cdot 1~~'"></div>
+                    <div v-katex:display="'\\begin{aligned}(11001)_2\&= 2^4\\cdot 1 + 2^3\\cdot 1 + 2^2\\cdot 0 + 2^1 \\cdot 0 + 2^0\\cdot 1 \\\\        \&= 16 +8 + 0 + 0 + 1 = (25)_{10}\\\\         \& \\\\ (0.0111)_2\&= 2^{-1}\\cdot 0 + 2^{-2}\\cdot 1 + 2^{-3}\\cdot 1 + 2^{-4}\\cdot 1 \\\\        \&= 0 + 0.25 + 0.125 + 0.0625 = (0.4375)_{10} \\end{aligned}'"></div>
 
-                    <div v-katex:display="' = 16 +8 + 0 + 0 + 1 = (25)_{10}'"></div>
-
-
-                    <div v-katex:display="'(0.0111)_2 = 2^{-1}\\cdot 0 + 2^{-2}\\cdot 1 + 2^{-3}\\cdot 1 + 2^{-4}\\cdot 1~~~~~ '"></div>
-
-                    <div v-katex:display="'~~~~~~~~~~~~~~~~~~~~~~=0 + 0.25 + 0.125 + 0.0625 = (0.4375)_{10}'"></div>
 
                 </div>
-
+                <!--./Example 2.2-->
             </div>
             <div class="py-3">
                 <h4 class="h4-responsive py-2 font-weight-bold">
@@ -191,7 +187,7 @@
                 <h5 class="font-weight-bold py-2">Converting of the integer part</h5>
                 A decimal number <span v-katex="'I_{10}'"></span>  can be represented in binary form as
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.13-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'I_{10} = (a_na_{n-1}\\ldots a_1a_0)_2 = 2^n a_n + 2^{n-1}a_{n-1}+\\ldots +2^1a_1 + 2^0a_0 = (a_na_{n-1}a_{n-2}\\ldots\\ldots a_2a_1a_0)_2.'"></div>
@@ -200,44 +196,32 @@
                         <div v-katex:display="'(2.13)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.12-->
                 For example
                 <div style="background-color: #e2e3e5" class="mt-3 mb-4 p-3">
                     <deep>Example 2.3</deep>
 
-                    <!--A row with two columns one for the equation the one for the numbering-->
+                    <!--Equation 2.14  & 2.15-->
                     <div class="row">
-                        <div class="col">
-                            <div v-katex:display="'7 = 4 + 2 + 1 = 2^2 +2^1 + 2^0 = (111)_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                        </div>
-                        <div class="col">
-                            <div v-katex:display="'(2.14)'"></div>
-                        </div>
-                    </div>
 
-                    <!--A row with two columns one for the equation the one for the numbering-->
-                    <div class="row">
                         <div class="col">
-                            <div v-katex:display="'25 = 16 + 8 + 1 = 2^4 + 2^3 + 0\\cdot 2^2 + 0 \\cdot 2^1 + 2^0 = (11001)_2'"></div>
-                        </div>
-                        <div class="col">
-                            <div v-katex:display="'(2.15)'"></div>
+                            <div v-katex:display="'\\begin{aligned}7 \&= 4 + 2 + 1 = 2^2 +2^1 + 2^0 = (111)_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\&(2.14)\\\\ 25\&= 16 + 8 + 1 = 2^4 + 2^3 + 0\\cdot 2^2 + 0 \\cdot 2^1 + 2^0 = (11001)_2 \&(2.15)\\end{aligned}'"></div>
                         </div>
                     </div>
+                    <!--Equation 2.14  & 2.15-->
+
+
                 </div>
                 The following procedure is a more general approach that can be
                 used to convert decimal integers to binary form.<br>
 
                 Given an integer <span v-katex="'I_{10}'"></span>, determine the quotients <span v-katex="'Q_i'"></span> and the remainders <span v-katex="'R_i'"></span> such that
-                <div v-katex:display="'I_{10} = 2Q_0 + R_0'"></div>
-                <div v-katex:display="'Q_0 = 2Q_1 + R_1'"></div>
-                <div v-katex:display="'Q_1 = 2Q_2 + R_'"></div>
-                <div v-katex:display="'\\vdots  \\vdots'"></div>
-                <div v-katex:display="' Q_{n-1} = 2Q_n + R_n '"></div>
+                <div v-katex:display="'\\begin{aligned} I_{10}\&=\& 2Q_0 + R_0\\\\  Q_0 \&=\&2Q_1 + R_1 \\\\  Q_1 \&=\& 2Q_2 + R_2 \\\\ \\vdots\& \&\\vdots \\\\ Q_{n-1} \&=\& 2Q_n + R_n \\end{aligned}'"></div>
+
 
                 The remainders are 0s and 1s and the binary form for the number <span v-katex="'I_{10}'"></span> is
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.16-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'R_nR_{n-1}R_{n-2}\\ldots R_1R_0'"></div>
@@ -246,10 +230,10 @@
                         <div v-katex:display="'(2.16)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.16-->
                 It should be noted that
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.17-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'R_nR_{n-1}R_{n-2}\\ldots R_1R_0  = a_na_{n-1}a_{n-2}\\ldots a_1a_0'"></div>
@@ -258,7 +242,8 @@
                         <div v-katex:display="'(2.17)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.17-->
+                <!--Example 2.4-->
                 <div style="background-color: #e2e3e5" class="mt-3 mb-4 p-3">
                     <deep>Example 2.4</deep>
                     Convert the following decimal numbers into binary form
@@ -273,17 +258,25 @@
 
                     </ol>
                 </div>
-
+                <!--./Exapmle 2.4-->
                 Answer:
 
                 <ol style="list-style:lower-latin">
                     <li>
                         <span v-katex="'\\textbf{This requires special attention} \\textit{around line 400 in the tex file}'"></span>
 
+
+                        <div v-katex:display="'\\begin{array}{c|rccc} \\multicolumn{2}{r}{\\rm Quotients}\& \& {\\rm Remainders} \\\\ 2\&53\& \\;\\;\\;\\;\\;\\;\\;\\;\&  \\\\ \\cline{2-2} 2\&26\& \\;\\;\\;\\;\\;\\;\\;\\;\& 1 = a_0 \\\\ \\cline{2-2} 2\&13\& \\;\\;\\;\\;\\;\\;\\;\\;\& 0 = a_1 \\\\ \\cline{2-2} 2\&6\& \\;\\;\\;\\;\\;\\;\\;\\;\&  1 = a_2 \\\\ \\cline{2-2} 2\&3\& \\;\\;\\;\\;\\;\\;\\;\\;\&  0 = a_3 \\\\ \\cline{2-2} 2\&1\& \\;\\;\;\\;\\;\\;\\;\\;\&  1 = a_4 \\\\ \\cline{2-2} 2\&0\& \\;\\;\\;\\;\\;\\;\\;\\;\&  1 = a_5 \\\\ \\cline{2-2} \\end{array}'"></div>
+
+                        Thus <span v-katex="'(53)_{10}'"></span> = <span v-katex="'(110101)_{2}'"></span>
                     </li>
 
                     <li>
                         <span v-katex="'\\textbf{Hence I will give it that attention later}'"></span>
+
+                        <div v-katex:display="'\\begin{array}{c|rccc}  \\multicolumn{2}{r}{\\rm Quotients}\& \& {\\rm Remainders} \\\\ 2\&315\& \\;\\;\\;\\;\\;\\;\\;\\;\&  \\\\ \\cline{2-2} 2\&157\& \\;\\;\\;\\;\\;\\;\\;\\;\& 1 = a_0 \\\\ \\cline{2-2} 2\&78\& \\;\\;\\;\\;\\;\\;\\;\\;\&  1 = a_1 \\\\ \\cline{2-2} 2\&39\& \\;\\;\\;\\;\\;\\;\\;\\;\&  0 = a_2 \\\\ \\cline{2-2} 2\&19\& \\;\\;\\;\\;\\;\\;\\;\\;\&  1 = a_3 \\\\ \\cline{2-2} 2\&9\& \\;\\;\\;\\;\\;\\;\\;\\;\&   1 = a_4 \\\\ \\cline{2-2} 2\&4\& \\;\\;\\;\\;\\;\\;\\;\\;\&   1 = a_5 \\\\ \\cline{2-2} 2\&2\& \\;\\;\\;\\;\\;\\;\\;\\;\&  0 = a_6 \\\\ \\cline{2-2} 2\&1\& \\;\\;\\;\\;\\;\\;\\;\\;\&   0 = a_7 \\\\ \\cline{2-2} 2\&0\& \\;\\;\\;\\;\\;\\;\\;\\;\&   1 = a_8 \\\\ \\cline{2-2} \\end{array}'"></div>
+
+                        Thus <span v-katex="'(315)_{10}'"></span> = <span v-katex="'(100111011)_{2}'"></span>
                     </li>
 
                 </ol>
@@ -292,7 +285,7 @@
                 In the case of a decimal fraction <span v-katex="'I'"></span> such that <span v-katex="' 0 < I < 1'"></span>,
                 we note that the binary form is
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.18-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'I = (0.d_1d_2d_3\\ldots d_{n-1}d_{n})_2 = \\frac{d_1}{2} + \\frac{d_2}{2^2} + \\frac{d_3}{2^3} + \\ldots + \\frac{d_n}{2^n}'"></div>
@@ -301,10 +294,10 @@
                         <div v-katex:display="'(2.18)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.18-->
                 then
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.19-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'2I =  d_1 + \\left(\\frac{d_2}{2} + \\frac{d_3}{2^2} + \\ldots + \\frac{d_n}{2^{n-1}}\\right)'"></div>
@@ -313,12 +306,12 @@
                         <div v-katex:display="'(2.19)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.19-->
                 The quantity in parenthesis on the right side of equation (2.19) is a positive number and is less than 1. Therefore <span v-katex="'d_1'"></span> is
                 the integer part of <span v-katex="'2I'"></span>, denoted <span v-katex="'d_1=int(2I)'"></span>. To continue the process, take the fractions part of (2.19) and write
 
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.20-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'F_1 = frac(2I)  =  \\frac{d_2}{2} + \\frac{d_3}{2^2} + \\ldots + \\frac{d_n}{2^{n-1}}'"></div>
@@ -327,10 +320,10 @@
                         <div v-katex:display="'(2.20)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.20-->
                 where <span v-katex="'frac(2I)'"></span> is the fractional part of the real
                 number <span v-katex="'2I'"></span>. Multiplying both sides of equation (2.20) by 2 results in
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.21-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'2F_1 = d_2 + \\left(\\frac{d_3}{2} + \\ldots + \\frac{d_n}{2^{n-2}}\\right)'"></div>
@@ -339,11 +332,12 @@
                         <div v-katex:display="'(2.21)'"></div>
                     </div>
                 </div>
+                <!--./Equation 2.21-->
                 Now, take the integer part of equation (2.21) and obtain <span v-katex="'d_2 = int(2F_1)'"></span>. This process is
                 continued and two sequences <span v-katex="'\{d_k \}'"></span> and <span v-katex="'\{F_k \}'"></span> are recursively generated such that
 
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.22-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'d_k = int(2F_{k-1}),\\;\\;\\;\\;\\;F_k = frac(2F_{k-1})'"></div>
@@ -352,9 +346,13 @@
                         <div v-katex:display="'(2.22)'"></div>
                     </div>
                 </div>
+                <!--./Equation 2.22-->
+
 
                 where <span v-katex="'d_1 = int(2I)'"></span> and <span v-katex="'F_1 = frac(2I)'"></span>.
 
+
+                <!--Example 2.5-->
                 <div style="background-color: #e2e3e5" class="mt-3 mb-4 p-3">
                     <span class="font-weight-bold">Example 2.5</span>
                     Convert the following decimal numbers to binary numbers
@@ -373,33 +371,27 @@
                     <ol style="list-style:lower-latin">
                         <li>
                             Let <span v-katex="'I = 0.4375'"></span>, then
-                            <div v-katex:display="'2I = 0.875  \\;\\;\\;\\;\\;\\; d_1 = int(0.875) = 0   \\;\\;\\;\\;\\;\\;  F_1 = frac(0.875) = 0.875 '"></div>
-                            <div v-katex:display="'2F_1 = 1.75  \\;\\;\\;\\;\\;\\; d_2 = int(1.75)  = 1  \\;\\;\\;\\;\\;\\;  F_2 = frac(1.75) = 0.75'"></div>
-                            <div v-katex:display="'2F_2 = 1.5  \\;\\;\\;\\;\\;\\; d_3 = int(1.5)  = 1  \\;\\;\\;\\;\\;\\;  F_3 = frac(1.5) = 0.5'"></div>
-                            <div v-katex:display="'2F_3 = 1.0  \\;\\;\\;\\;\\;\\; d_4 = int(1.0)  = 1  \\;\\;\\;\\;\\;\\;  F_4 = frac(1.0) = 0'"></div>
+                            <div v-katex:display="'\\begin{array}{lllll} 2I = 0.875 \& \\;\\;\\;\\;\\;\\;\& d_1 = int(0.875) = 0 \&  \\;\\;\\;\\;\\;\\; \& F_1 = frac(0.875) = 0.875 \\\\ 2F_1 = 1.75 \& \\;\\;\\;\\;\\;\\;\& d_2 = int(1.75)  = 1\&  \\;\\;\\;\\;\\;\\; \& F_2 = frac(1.75) = 0.75 \\\\ 2F_2 = 1.5 \& \\;\\;\\;\\;\\;\\;\& d_3 = int(1.5)  = 1\&  \\;\\;\\;\\;\\;\\; \& F_3 = frac(1.5) = 0.5 \\\\ 2F_3 = 1.0 \& \\;\\;\\;\\;\\;\\;\& d_4 = int(1.0)  = 1\&  \\;\\;\\;\\;\\;\\; \& F_4 = frac(1.0) = 0 \\\\ \\end{array}'"></div>
+                           
                             Thus, <span v-katex="'(0.4375)_{10} = (0.0111)_2'"></span> <br><br>
                         </li>
 
                         <li>
                             Let <span v-katex="'I = 0.6'"></span>
 
-                            <div v-katex:display="'2I = 1.2    \\;\\;\\;\\;\\;\\; d_1 = int(1.2)  = 1  \\;\\;\\;\\;\\;\\;  F_1 = frac(1.2) = 0.2'"></div>
-                            <div v-katex:display="'2F_1 = 0.4  \\;\\;\\;\\;\\;\\; d_2 = int(0.4)  = 0  \\;\\;\\;\\;\\;\\;  F_2 = frac(0.4) = 0.4'"></div>
-                            <div v-katex:display="'2F_2 = 0.8  \\;\\;\\;\\;\\;\\; d_3 = int(0.8)  = 0  \\;\\;\\;\\;\\;\\;  F_3 = frac(0.8) = 0.8'"></div>
-                            <div v-katex:display="'2F_3 = 1.6  \\;\\;\\;\\;\\;\\; d_4 = int(1.6)  = 1  \\;\;\\;\\;\\;\\;  F_4 = frac(1.6) = 0.6 '"></div>
-
-                            <div v-katex:display="'2F_4 = 1.2  \\;\\;\\;\\;\\;\\; d_5 = int(1.2)  = 1  \\;\\;\\;\\;\\;\\;  F_5 = frac(1.2) = 0.2 '"></div>
-                            <div v-katex:display="'2F_5 = 0.4  \\;\\;\\;\\;\\;\\; d_6 = int(0.4)  = 0  \\;\\;\\;\\;\\;\\;  F_6 = frac(0.4) = 0.4'"></div>
-                            <div v-katex:display="'2F_6 = 0.8  \\;\\;\\;\\;\\;\\; d_7 = int(0.8)  = 0  \\;\\;\\;\\;\\;\\;  F_7 = frac(0.8) = 0.8'"></div>
-                            <div v-katex:display="'2F_7 = 1.6  \\;\\;\\;\\;\\;\\; d_8 = int(1.6)  = 1  \\;\\;\\;\\;\\;\\;  F_8 = frac(1.6) = 0.6'"></div>
+                            <div v-katex:display="'\\begin{array}{lllll} 2I = 1.2   \&  \\;\\;\\;\\;\\;\\; \& d_1 = int(1.2)  = 1\&  \\;\\;\\;\\;\\;\\; \& F_1 = frac(1.2) = 0.2 \\\\ 2F_1 = 0.4 \&  \\;\\;\\;\\;\\;\\; \& d_2 = int(0.4)  = 0\&  \\;\\;\\;\\;\\;\\; \& F_2 = frac(0.4) = 0.4\\\\ 2F_2 = 0.8 \&  \\;\\;\\;\\;\\;\\; \& d_3 = int(0.8)  = 0\&  \\;\\;\\;\\;\\;\\; \& F_3 = frac(0.8) = 0.8 \\\\ 2F_3 = 1.6 \&  \\;\\;\\;\\;\\;\\; \& d_4 = int(1.6)  = 1\&  \\;\\;\\;\\;\\;\\; \& F_4 = frac(1.6) = 0.6 \\\\ 2F_4 = 1.2 \&  \\;\\;\\;\\;\\;\\; \& d_5 = int(1.2)  = 1\&  \\;\\;\\;\\;\\;\\; \& F_5 = frac(1.2) = 0.2 \\\\ 2F_5 = 0.4 \&  \\;\\;\\;\\;\\;\\; \& d_6 = int(0.4)  = 0\&  \\;\\;\\;\\;\\;\\; \& F_6 = frac(0.4) = 0.4\\\\ 2F_6 = 0.8 \&  \\;\\;\\;\\;\\;\\; \& d_7 = int(0.8)  = 0\&  \\;\\;\\;\\;\\;\\; \& F_7 = frac(0.8) = 0.8 \\\\ 2F_7 = 1.6 \&  \\;\\;\\;\\;\\;\\; \& d_8 = int(1.6)  = 1\&  \\;\\;\\;\\;\\;\\; \& F_8 = frac(1.6) = 0.6 \\\\ \\end{array}'"></div>
+                            
+                           
                             Thus, <span v-katex="'(0.6)_{10} = (0.10011001\\ldots)_2 = (0.\\overline{1001})_2'"></span>
 
                         </li>
 
                     </ol>
                 </div>
-
+                <!--./Exapmle 2.5-->
             </div>
+            <!--./Section 2.1.1-->
+            <!--Section 2.1.2-->
             <div class="py-3">
                 <h4 class="h4-responsive py-2 font-weight-bold">
                     2.1.2 Binary shifting
@@ -407,7 +399,7 @@
 
                 Consider the binary number
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.23-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'S = (0.00000\\overline{11000})_2'"></div>
@@ -416,10 +408,10 @@
                         <div v-katex:display="'(2.23)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.23-->
                 Multiplying both sides of (2.23) by  <span v-katex="'2^5'"></span> shifts the binary point five places to the right to obtain
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.24-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'32S = (0.\\overline{11000})_2'"></div>
@@ -428,10 +420,10 @@
                         <div v-katex:display="'(2.24)'"></div>
                     </div>
                 </div>
-
+                <!--./Equation 2.24-->
                 Multiplying equation (2.23) by <span v-katex="'2^{10}'"></span> shifts the binary point ten places to the right to give
 
-                <!--A row with two columns one for the equation the one for the numbering-->
+                <!--Equation 2.25-->
                 <div class="row">
                     <div class="col">
                         <div v-katex:display="'1024S = (11000.\\overline{11000})_2'"></div>
@@ -440,18 +432,20 @@
                         <div v-katex:display="'(2.25)'"></div>
                     </div>
                 </div>
+                <!--./Equation 2.25-->
+
 
                 Subtracting equation (2.23) from (2.25) gives
 
-                <div v-katex:display="'992S = (11000)_2~~~~~~~~~~'"></div>
-                <div v-katex:display="'992S = 24~~~~~~~~~~~~~~~~~~~~'"></div>
-                <div v-katex:display="'S= \\frac{24}{992} = \\frac{3}{124}'"></div>
+                <div v-katex:display="'\\begin{aligned} 992S\&=(11000)_2 \\\\ 992S\&= 24 \\\\   S\&=\\frac{24}{992} = \\frac{3}{124} \\end{aligned}'"></div>
+                
 
                 Thus, <span v-katex="'\\ S = (0.00000\\overline{11000})_2  = \\displaystyle{\\frac{3}{124}}'"></span>
             </div>
+            <!--./Section 2.1.2-->
         </section>
-        <!--/Chapter 2.1 ends here -->
-        <!--Exercice 2.1 start here-->
+        <!--./Section 2.1 -->
+        <!--Exercice 2.1-->
         <section class="dark-grey-text mb-4 pt-3 px-3 mx-4" style="background-color:#fff3e0" id="ex-1">
             <h4 class="h4-responsive">Exercise 2.1  <strong>Decimal and Binary system</strong></h4>
             <ol>

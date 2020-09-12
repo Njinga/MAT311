@@ -1247,7 +1247,7 @@
                     This theorem is used to bound the error in cases where 
                     the <span v-katex="'f(x)'"></span> and its <span v-katex="'n'"></span>th derivative is not known.
       The error is approximated using the <deep>next term rule</deep> defined as
-                    <div v-katex:display="'\\begin{aligned} E_n(x) \&= f^{(n+1)}(\\xi) \\frac{(x - x_0)(x - x_1)\\cdots  (x - x_n)}{(n + 1)!}\\\\ \&\\approx f[x_0,x_1,\\ldots,x_n,x_{n+1}] (x - x_0)(x - x_1)\\cdots  (x - x_n) \\end{aligned}'"></div>
+                    <div v-katex:display="'\\begin{aligned}E_n(x) \&= f^{(n+1)}(\\xi) \\frac{(x - x_0)(x - x_1)\\cdots  (x - x_n)}{(n + 1)!}\\\\ \&\\approx f[x_0,x_1,\\ldots,x_n,x_{n+1}] (x - x_0)(x - x_1)\\cdots  (x - x_n) \\end{aligned}'"></div>
                 </div>
 
                 <!--./Section 4.4.1-->
