@@ -966,8 +966,8 @@
 
         </section>
 
-        <!--./Exercises end here-->
-        <!--section 2.2 start here-->
+        <!--./Exercise 2.1-->
+        <!--section 2.2-->
         <section class="dark-grey-text mb-4 pt-3 px-3 mx-4">
             <h4 class="h4-responsive pt-2 font-weight-bold blue-text">
                 2.2 Representing Numbers
@@ -977,7 +977,7 @@
             can be represented and how computers store numbers and we develop
             the basic ideas of roundoff errors.
 
-            <!--Section 2.2.1 start here-->
+            <!--Section 2.2.1-->
             <div class="py-3">
                 <h4 class="h4-responsive py-2 font-weight-bold">
                     2.1.2 Floating-Point Representation and Errors
@@ -1011,7 +1011,7 @@
                 sign (i.e +1 or -1), <span v-katex="'\\bar{x}'"></span> is the
                 mantissa, and <span v-katex="'e'"></span> is the exponent.
 
-                <!--Example 2.6 start here-->
+                <!--Example 2.6-->
                 <div style="background-color: #e2e3e5" class="mt-3 mb-4 p-3">
                     <span class="font-weight-bold">Example 2.6</span>
                     Represent the following numbers 12.484574, 0.0048585, 39470.982331 in scientific notation
@@ -1021,14 +1021,13 @@
                     Answer: We shift the decimal point in such a way that the mantissa falls between 1 and 10.
                     <br><br>
 
-                    <div v-katex="'~~~~~~12.484574 = +1.2484574 \\times 10^1,\\;\\;\\;(\\text{Shift decimal to the left once})'"></div>
-                    <div v-katex="'~~~~~~0.0048585 = +4.8585 \\times 10^{-3},\\;\\;\\;(\\text{Shift decimal to the right three times}) '"></div>
-                    <div v-katex="'39470.982331 = +3.9470982331 \\times 10^{4},\\;\\;\\;(\\text{Shift decimal to the left four times}) '"></div>
+                    <div v-katex="'\\begin{aligned} 12.484574 \&= +1.2484574 \\times 10^1,\\;\\;\\;(\\textrm{Shift decimal to the left once}) \\\\ 0.0048585 \&= +4.8585 \\times 10^{-3},\\;\\;\\;(\\textrm{Shift decimal to the right three times}) \\\\ 39470.982331\&=+3.9470982331 \\times 10^{4},\\;\\;\\;(\\textrm{Shift decimal to the left four times}) \\end{aligned}'"></div>
+                  
 
                     <br>
 
                 </div>
-                <!--Example 2.6 end here-->
+                <!--./Example 2.6-->
                 Another form, called the <span class="font-weight-bold">
                     normalized
                     scientific notation
@@ -1055,9 +1054,8 @@
 
                 Thus, the numbers in example 2.6 have the following representations
                 <br /> <br />
-                <div v-katex="'~~~~~~12.484574 = 0.12484574 \\times 10^2,\\;\\;\\;(\\text{Shift decimal to the left two times})'"></div>
-                <div v-katex="'~~~~~~0.0048585 =  0.48585 \\times 10^{-2},\\;\\;\\;(\\text{Shift decimal to the right two times})'"></div>
-                <div v-katex="'39470.982331 = 0.39470982331 \\times 10^{5},\\;\\;\\;(\\text{Shift decimal to the left five times})'"></div>
+                <div v-katex="'\\begin{aligned} 12.484574 \&= 0.12484574 \\times 10^2,\\;\\;\\;(\\textrm{Shift decimal to the left two times}) \\\\ 0.0048585 \&= 0.48585 \\times 10^{-2},\\;\\;\\;(\\textrm{Shift decimal to the right two times}) \\\\ 39470.982331\&=0.39470982331 \\times 10^{5},\\;\\;\\;(\\textrm{Shift decimal to the left five times}) \\end{aligned}'"></div>
+             
                 <br /><br />
                 In the context of computer science, normalized scientific
                 notation is also called <span class="font-weight-bold"> normalized floating point-representation</span>.
@@ -1103,7 +1101,7 @@
                     0 or 1.
                 </p>
 
-                <!--Example 2.7 start here-->
+                <!--Example 2.7-->
                 <div style="background-color: #e2e3e5" class="mt-3 mb-4 p-3">
                     <span class="font-weight-bold">Example 2.7</span>
 
@@ -1119,11 +1117,7 @@
                     numbers. However, there is some duplication. For
                     example, the positive numbers are as follows
 
-                    <div v-katex:display="'0.00 \\times 2^0 =0 ~~~~~~~~0.00 \\times 2^1  =  0 ~~~~~~~~0.00 \\times 2^{-1} = 0'"></div>
-                    <div v-katex:display="'0.01 \\times 2^0 =  \\displaystyle \\frac{1}{4} ~~~~~~~~0.01 \\times 2^1  =  \\displaystyle \\frac{1}{2} ~~~~~~~~ 0.01 \\times 2^{-1} = \\displaystyle  \\frac{1}{8}'"></div>
-                    <div v-katex:display="'0.10 \\times 2^0 = \\displaystyle \\frac{1}{2} ~~~~~~~~0.10 \\times 2^1  = 1 ~~~~~~~~0.10 \\times 2^{-1} = \\displaystyle \\frac{1}{4}'"></div>
-                    <div v-katex:display="'0.11 \\times 2^0 = \\displaystyle \\frac{3}{4} ~~~~~~~~0.11 \\times 2^1  =  \\displaystyle \\frac{3}{2} ~~~~~~~~0.11 \\times 2^{-1}  = \\displaystyle \\frac{3}{8}'"></div>
-
+                    <div v-katex:display="'\\begin{array}{ccccccccccccc} 0.00 \\times 2^0 \&=\&0 \&~~\&~~\&0.00 \\times 2^1 \& = \& 0 \&~~\&~~0.00 \\times 2^{-1} = 0 \\\\ \\\\ 0.01 \\times 2^0 \&=\&  \\displaystyle \\frac{1}{4} \&~~\&~~\&0.01 \\times 2^1 \& = \& \\displaystyle \\frac{1}{2} \&~~\&~~0.01 \\times 2^{-1} = \\displaystyle  \\frac{1}{8} \\\\ \\\\ 0.10 \\times 2^0 \&=\& \\displaystyle \\frac{1}{2} \&~~\&~~\&0.10 \\times 2^1 \& = \&1 \&~~\&~~0.10 \\times 2^{-1} = \\displaystyle \\frac{1}{4} \\\\ \\\\ 0.11 \\times 2^0 \&=\& \\displaystyle \\frac{3}{4} \&~~\&~~\&0.11 \\times 2^1 \& = \& \\displaystyle \\frac{3}{2} \&~~\&~~0.11 \\times 2^{-1}  = \\displaystyle \\frac{3}{8}\\\\ \\end{array}'"></div>
                     The positive numbers obtained are shown on the line below
                 </div>
 
@@ -1157,8 +1151,8 @@
                 to zero, and any number outside the range -1.5 to 1.5 would
                 overflow to machine infinity.
             </div>
-            <!--./Section 2.2.1 end here-->
-            <!--Section 2.2.2 start here-->
+            <!--./Section 2.2.1-->
+            <!--Section 2.2.2-->
             <div class="py-3">
                 <h4 class="h4-responsive font-weight-bold">
                     2.2.2 Single-Precision floating point form
@@ -1256,9 +1250,8 @@
                 </div>
 
                 Note that
-                <div v-katex:display="'1.111~111~111~111~111~111~111~11 = 2^0 + \\overbrace{2^{-1} + 2^{-2} + \\cdots + 2^{-23}}^{\\rm 23~ terms}'"></div>
-                <div v-katex:display="'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ = \\displaystyle 1 + 2^{-1}\\frac{[1 - (2^{-1})^{23}]}{(1-2^{-1})}'"></div>
-                <div v-katex:display="'~~~~~~~~~~~~~~~~~~~~~~~~~~= 2 - 2^{-23}'"></div>
+                <div v-katex:display="'\\begin{aligned} 1.111~111~111~111~111~111~111~11 \&= 2^0 + \\overbrace{2^{-1} + 2^{-2} + \\cdots + 2^{-23}}^{\\rm 23~ terms}\\\\ \&= \\displaystyle 1 + 2^{-1}\\frac{[1 - (2^{-1})^{23}]}{(1-2^{-1})}\\\\ \&= 2 - 2^{-23} \\end{aligned}'"></div>
+                
 
                 The largest number representable is therefore
                 <div v-katex:display="'(2 - 2^{-23})2^{127} \\approx 2^{128} \\approx 3.4 \\times 10^{38}'"></div>
@@ -1275,7 +1268,7 @@
                 that <span v-katex="'1 + \\varepsilon \\neq 1'"></span>.<br />
 
 
-                <!--Example 2.8 start here-->
+                <!--Example 2.8-->
                 <div style="background-color: #e2e3e5" class="my-3 mb-4 p-3">
                     <span class="font-weight-bold">Example 2.8</span>
                     Determine the decimal number that has the following single-precision representation
@@ -1286,22 +1279,18 @@
                     The stored exponent is
 
 
-                    <div v-katex:display="'(100~010~10)_2 = 2^{1} + 2^{3} + 2^{7}'"></div>
-                    <div v-katex:display="' ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ = 2 + 8 + 128 = 138'"></div>
-                    <div v-katex:display="' ~~~~\\text{Thus}\\;\\;\\;e-127 = 138 - 127 = 11'"></div>
+                    <div v-katex:display="'\\begin{aligned} (100~010~10)_2\&= 2^{1} + 2^{3} + 2^{7} \\\\              \&= 2 + 8 + 128 = 138 \\\\ \\textrm{Thus}\\;\\;\\;e-127\&= 138 - 127 = 11              \\end{aligned}'"></div>
+               
 
                     The fractional part <span v-katex="'f'"></span> is <span katex="'0.010~001~000~111~01'"></span>.
                     The decimal number <span v-katex="'N'"></span> is
 
-                    <div v-katex:display="'N = (-1)^s \\times 2^{e - 127} \\times (1.f)_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                    <div v-katex:display="'= (1.010~001~000~111~01)\\times 2^{11}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                    <div v-katex:display="'=1010~001~000~11.1~01~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                    <div v-katex:display="'= 2^{-3} + 2^{-1} + 2^0 + 2^1 + 2^5 + 2^9 + 2^{11} = 2595.625 '"></div>
-
+                    <div v-katex:display="'\\begin{aligned} N \&= (-1)^s \\times 2^{e - 127} \\times (1.f)_2\\\\  \&=  (1.010~001~000~111~01)\\times 2^{11} \\\\  \&=   1010~001~000~11.1~01 \\\\  \&=   2^{-3} + 2^{-1} + 2^0 + 2^1 + 2^5 + 2^9 + 2^{11} = 2595.625  \\end{aligned}'"></div>
+                
                 </div>
+                <!--./Example 2.8-->
 
-
-                <!--Example 2.8 start here-->
+                <!--Example 2.9-->
                 <div style="background-color: #e2e3e5" class="my-3 mb-4 p-3">
                     <span class="font-weight-bold">Example 2.9</span>
 
@@ -1310,10 +1299,8 @@
                     Answer: We start by converting the decimal into binary form.
                     Converting the integer and fractional part we have,
 
-                    <div v-katex:display="'52 = (110~100)_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                    <div v-katex:display="' 0.234375 = (0.001~111)_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                    <div v-katex:display="'\\text{Thus}\\;\\;\\;\\;52.234375 = (110~100.001~111)_2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'"></div>
-                    <div v-katex:display="'= (1.101~000~011~11)_2 \\times 2^5~~~~ '"></div>
+                    <div v-katex:display="'\\begin{aligned}52\&= (110~100)_2\\\\ 0.234375\&=(0.001~111)_2\\\\ \\textrm{Thus}\\;\\;\\;\\;52.234375\&=(110~100.001~111)_2\\\\                            \&= (1.101~000~011~11)_2 \\times 2^5\\\\ \\end{aligned}'"></div>
+
 
 
                     The sign is <span v-katex="'s = 1'"></span> and
