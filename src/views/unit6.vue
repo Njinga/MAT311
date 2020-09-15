@@ -121,15 +121,226 @@
                     Since the row operation used is
 
                     <div v-katex:display="'\\begin{array}{ccccc}R_4 \&\\rightarrow& R_4\&+\&R_3\\\\ \\end{array}'"></div>
-                    <div v-katex:display="''"></div>
-                    <div v-katex:display="''"></div>
-                    <div v-katex:display="''"></div>
-                    <div v-katex:display="''"></div>
-                    <div v-katex:display="''"></div>
+
+                    It follows that
+
+                    <div v-katex:display="'M_3 = \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	0\&	1\&	0\\\\ 0\&	0\&	1\&	1\\\\ \\end{bmatrix}'"></div>
+
+                    Thus, the matrix <span v-katex="'M'"></span> can be obtained as a product of the three multiplier matrices:
+
+                    <div v-katex:display="'M = M_3M_2M_1'"></div>
+
+                    The forward elimination process can thus be interpreted as follows:
+
+                    <div v-katex:display="'\\begin{aligned} MA\& = U\\\\ A\&=M^{-1}U\\\\ \&=M_1^{-1}M_2^{-1}M_3^{-1}U\\\\ \&=LU \\end{aligned}'"></div>
+
+                    where <span v-katex="'L = M_1^{-1}M_2^{-1}M_3^{-1}'"></span>. The
+                    inverses <span v-katex="'M_1^{-1}, M_2^{-1},M_3^{-1}'"></span> can
+                    be obtained by simply changing the signs of the multipliers. Thus, we have
+
+
+
+                    <div v-katex:display="'L = \\begin{bmatrix}	 1\&	0\&	0\&	0\\\\2\&	1\&	0\&	0\\\\ -1\&	0\&	1\&	0\\\\ 2\&	0\&	0\&	1\\\\ \\end{bmatrix} \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	2\&	1\&	0\\\\ 0\&	3\&	0\&	1\\\\ \\end{bmatrix} \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	0\&	1\&	0\\\\ 0\&	0\&	-1\&	1\\\\ \\end{bmatrix}	= \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 2\&	1\&	0\&	0\\\\ -1\&	2\&	1\&	0\\\\ 2\&	3\&	-1\&	1\\\\ \\end{bmatrix}'"></div>
+
+                    <br /><br />
+                    <dpan class="font-weight-bold">Step 1 </dpan>
+
+                    <div v-katex:display="'\\begin{array}{cccccc} R_2 \&\\rightarrow& R_2\&-\&2R_1\\\\ R_3 \&\\rightarrow& R_3\&+\&R_1\\\\ R_4 \&\\rightarrow& R_4\&-\&2R_1\\\\ \\end{array}\\begin{bmatrix} 2\&	1\&	-1\&	2\\\\ 0\&	3\&	-1\&	2\\\\ 0\&	6\&	-3\&	8\\\\ 0\&	9\&	-2\&	4\\\\ \\end{bmatrix}'"></div>
+
+                    <div v-katex:display="'M_1 = \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ -2\&	1\&	0\&	0\\\\ 1\&	0\&	1\&	0\\\\ -2\&	0\&	0\&	1\\\\ \\end{bmatrix} ,\\;\\;\\; M_1^{-1}  = \\begin{bmatrix}  1\&	0\&	0\&	0\\\\ 2\&	1\&	0\&	0\\\\ -1\&	0\&	1\&	0\\\\ 2\&	0\&	0\&	1\\\\ \\end{bmatrix}'"></div>
+
+
+                    <dpan class="font-weight-bold">Step 2 </dpan>
+                    <div v-katex:display="'\\begin{array}{ccccc} R_3 \&\\rightarrow& R_3\&-\&2R_2\\\\ R_4 \&\\rightarrow& R_4\&-\&3R_2\\\\ \\end{array}\\begin{bmatrix} 2\&	1\&	-1\&	2\\\\ 0\&	3\&	-1\&	2\\\\ 0\&	0\&	-1\&	4\\\\0\&	0\&	1\&	-2\\\\ \\end{bmatrix}'"></div>
+                    <div v-katex:display="'M_2 = \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	-2\&	1\&	0\\\\ 0\&	-3\&	0\&	1\\\\ \\end{bmatrix} ,\\;\\;\\;\\; M_2^{-1} = \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	2\&	1\&	0\\\\ 0\&	3\&	0\&	1\\\\ \\end{bmatrix}'"></div>
+
+                    <dpan class="font-weight-bold">Step 3 </dpan>
+
+                    <div v-katex:display="'\\begin{array}{ccccc} R_4 \&\\rightarrow\& R_4\&+\&R_3\\\\ \\end{array} \\begin{bmatrix} 2\&	1\&	-1\&	2\\\\ 0\&	3\&	-1\&	2\\\\ 0\&	0\&	-1\&	4\\\\ 0\&	0\&	 0\&	2\\\\ \\end{bmatrix}'"></div>
+                    <div v-katex:display="'M_3 = \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	0\&	1&	0\\\\ 0\&	0\&	1\&	1\\\\ \\end{bmatrix},\\;\\;\\;\\;  M_3^{-1} = \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	0\&	1\&	0\\\\ 0\&	0\&	-1\&	1\\\\ \\end{bmatrix}'"></div>
+                    <div v-katex:display="'U  = \\begin{bmatrix} 2\&	1\&	-1\&	2\\\\ 0\&	3\&	-1\&	2\\\\ 0\&	0\&	-1\&	4\\\\ 0\&	0\&	0\&	2\\\\ \\end{bmatrix}'"></div>
+
+
+                    <div v-katex:display="' \\begin{aligned} L	\&=	M_1^{-1}M_2^{-1}M_3^{-1}\\\\	\&=	\\begin{bmatrix}	1\&	0\&	0\&	0\\\\ 2\&	1\&	0\&	0\\\\ -1\&	0\&	1\&	0\\\\ 2\&	0\&	0\&	1\\\\ \\end{bmatrix} \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	2\&	1\&	0\\\\ 0\&	3\&	0\&	1\\\\ \\end{bmatrix} \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 0\&	1\&	0\&	0\\\\ 0\&	0\&	1\&	0\\\\ 0\&	0\&	-1\&	1\\ \\end{bmatrix} \\\\	\&= \\begin{bmatrix} 1\&	0\&	0\&	0\\\\ 2\&	1\&	0\&	0\\\\ -1\&	2\&	1\&	0\\\\ 2\&	3\&	-1\&	1\\\\ \\end{bmatrix} \\end{aligned}'"></div>
+
+
+
                 </div>
                 <!--./Section 6.1.3-->
             </div>
             <!--./Section 6.1-->
+            <!--Section 6.2-->
+            <div class="mb-3">
+                <h4 class="h4-responsive pt-2 font-weight-bold blue-text">
+                    6.2 Solving linear equations using  <span v-katex="'LU'"></span> factorisation
+                </h4>
+                <hr class="blue mb-4 mt-0 ">
+
+                Assume that  <span v-katex="'A'"></span> has a  <span v-katex="'LU'"></span> factorization.  The solution  <span v-katex="'X'"></span> to the linear system  <span v-katex="'AX = b'"></span> , as follows:
+                <div v-katex:display="'                \\begin{aligned}              AX \&=b\\\\                LUX\&=b \\\\                LZ \&=b,\\;\\;\\;\\; \\textrm{where}\\;\\; Z=UX;                \\end{aligned}'"></div>
+
+                To solve the matrix equation for <span v-katex="'X'"></span>, first we solve <span v-katex="'LZ=b'"></span> for <span v-katex="'Z'"></span> using the forward-substitution method, then solve <span v-katex="'UX=Z'"></span> for <span v-katex="'X'"></span> by backward-substitution method.<br />
+                <!--Example 6.1-->
+                <div style="background-color: #e2e3e5" class="my-3 mb-4 p-3">
+                    <span class="font-weight-bold">Example 6.1</span>
+                    Find the <span v-katex="'LU'"></span> factorisation of the matrix <span v-katex="'A'"></span> in which <span v-katex="'L'"></span> is a unit lower triangular matrix and U is an upper triangular matrix
+
+                    <div v-katex:display="'A=\\begin{bmatrix}     4\& -6\& -5\\\\      4\& -5\& -5\\\\      -8\& 2\& -6      \\end{bmatrix}'"></div>
+                    and use the LU factorization to solve the linear system
+
+
+
+                    <div v-katex:display="'  \\begin{aligned}      4 x_1 - 6x_2 - 5 x_3 \&=-50\\\\      4 x_1 - 5x_2 - 5 x_3 \&=-47\\\\      - 8 x_1 + 2x_2 - 6 x_3 \&=6      \\end{aligned}'"></div>
+
+                    <i>Solution</i><br /><br />
+                    Denote the <span v-katex="'L'"></span> and <span v-katex="'U'"></span> matrices by
+
+
+                    <div v-katex:display="'L = \\left( \\begin{array}{ccc} 1 \& 0 & 0  \\\\ \\ell _{2,1} \& 1 \& 0\\\\ \\ell _{3,1} & \\ell _{3,2} \& 1 \\end{array} \\right)\\;\\;\\;\\;\\textrm{and}\\;\\;\\;\\; U = \\left( \\begin{array}{ccccc}  u_{1,1} \& u_{1,2} \& u_{1,3}  \\\\  0 \& u_{2,2} \& u_{2,3} \\\\ 0 \& 0 \& u_{3,3} \\end{array} \\right)'"></div>
+                    so that the equation <span v-katex="'LU = A'"></span> is represented as
+
+
+
+                    <div v-katex:display="'\\left( \\begin{array}{ccc} 1 \& 0 \& 0  \\\\  \\ell _{2,1} \& 1 \& 0\\\\ \\ell _{3,1} \& \ell _{3,2} \& 1  \\end{array} \\right)\\left( \\begin{array}{ccccc} u_{1,1} & u_{1,2} \& u_{1,3}  \\\\ 0 \& u_{2,2} \& u_{2,3} \\\\ 0 \& 0 \& u_{3,3} \\end{array} \\right) = \\left(\\begin{array}{ccc} 4\&	-6\&	-5\\\\ 4\&	-5\&	-5\\\\ -8\&	 2\&	-6 \\end{array} \\right)'"></div>
+
+                    Multiplying the matrix equation and solving for
+                    the unknowns in succession gives
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div v-katex:display="'\\begin{aligned}\&u_{1,1} = 4\\\\ \&u_{1,1}\\ell_{2,1} = 4\\\\ \&u_{1,1}\\ell_{3,1} = -8 \\end{aligned}'"></div>
+                            </div>
+                            <div class="col">
+                                <div v-katex:display="'\\begin{aligned} \&u_{1,1} = 4\\\\ \&\\ell_{2,1} = 1\\\\ \&\\ell_{3,1} = -2 \\end{aligned}'"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div v-katex:display="'\\begin{aligned}\&u_{1,2} = -6\\\\\&u_{2,2}+u_{1,2}\\ell_{2,1} = -5\\\\ \&u_{1,2}\\ell_{3,1}+u_{2,2}\\ell_{3,2} = 2 \\end{aligned}'"></div>
+                            </div>
+                            <div class="col">
+                                <div v-katex:display="'\\begin{aligned} \&u_{1,2} = -6\\\\ \&u_{2,2} = 1\\\\ \&\\ell_{3,2} = -10 \\end{aligned}'"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div v-katex:display="'\\begin{aligned} \&u_{1,3} = -5\\\\ \&u_{2,3}+u_{1,3}\\ell_{2,1} = -5\\\\ \&u_{3,3}+u_{1,3}\\ell_{3,1} + u_{2,3}\\ell_{3,2} = -6 \\end{aligned}'"></div>
+                            </div>
+                            <div class="col">
+                                <div v-katex:display="'\\begin{aligned}\&u_{1,3} = -5\\\\ \&u_{2,3} = 0\\\\ \&u_{3,3} = -16 \\end{aligned}'"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    Then, we have
+
+                    <div v-katex:display="' L = \\left(\\begin{array}{ccc} 1\&	0\&	0\\\\ 1\&	1\&	0\\\\ -2\&	-10\&1 \\end{array}\\right) \\;\\;\\;\\; \\textrm{and }\\;\\;\\;\\; U = \\left( \\begin{array}{ccc} 4\&	-6\&	-5\\\\ 0\&	1\&	0\\\\ 0\&	0\&	-16 \\end{array}\\right)'"></div>
+
+                    Using the <span v-katex="'LU'"></span> factorisation of <span v-katex="'A'"></span>, we can write <span v-katex="'Ax  = b'"></span> as
+
+
+                    <div v-katex:display="'Ax = (LU)x = L(Ux) = b'"></div>
+
+
+                    The matrix equation can be written as <span v-katex="'Lz = b'"></span>, where <span v-katex="'z = Ux'"></span>.
+                    Thus, the equation system can be solved in two steps by solving
+
+                    <div v-katex:display="'\\begin{aligned}Lz	\&=	b\\\\ Ux	\&=	z \\end{aligned}'"></div>
+
+                    The solution for <span v-katex="'z'"></span> is obtained from <span v-katex="'Lz = b'"></span> as
+
+                    <div v-katex:display="'\\left(\\begin{array}{ccc} 1\&	0\&	0\\\\ 1\&	1\&	0\\\\ -2\&	-10\&1\\\\ \\end{array} \\right) \\left( \\begin{array}{c} z_1\\\\ z_2\\\\ z_3 \\end{array} \\right) =  \\left(  \\begin{array}{c}  -50\\\\ -47\\\\ 6 \\end{array} \\right)'"></div>
+
+                    Since <span v-katex="'L'"></span> is lower triangular, we can use forward substitution to obtain
+
+                    <div v-katex:display="'\\begin{aligned} z_1 \&= -50\\\\ z_2	\&=-47 - z_1 =  -47 - (-50) = 3\\\\ z_3	\&=6 +2z_1 + 10z_2 = 6  + 2(-50)+ 10(3) = -64 \\end{aligned}'"></div>
+
+                    The equation <span v-katex="'Ux = z'"></span> becomes
+
+                    <div v-katex:display="'\\left(\\begin{array}{ccc}4\& -6\&	-5\\\\0\&	1\&	0\\\\0\&	0\&	-16\\end{array}\\right)\\left(\\begin{array}{c}x_1\\\\x_2\\\\x_3\\end{array} \\right) = \\left(\\begin{array}{c}-50\\\\3\\\\-64 \\end{array} \\right)'"></div>
+
+                    Finally, we apply backward substitution to solve for <span v-katex="'x'"></span> as follows:
+
+                    <div v-katex:display="'\\begin{aligned} x_3 \&= 4\\\\ x_2 \&=3\\\\ x_1 \&= \\frac{1}{4}(-50 +6x_2 + 5x_3) =	\\frac{1}{4}[-50 +6(3) + 5(4)] = -3  \\end{aligned}'"></div>
+                </div>
+                <!--./Example 6.1-->
+                <!--Exercise 6.1-->
+                <div class="my-4 p-3" style="background-color:#fff3e0">
+                    <h5 class="h4-responsive">Exercise 6.1  <deep>LU Decomposition</deep></h5>
+
+                    <ol>
+                        <li>
+                            <ol style="list-style:lower-latin">
+                                <li>
+
+                                    Use the Dolittle method to find the $LU$ factorisation of the following matrices
+                                    <div v-katex:display="' A =                                   \\begin{bmatrix}                                   5 \& 6 \& -5 \\\\                                   25 \&36\& -28\\\\                                    -10\& 18\& -10\\\\                                    \\end{bmatrix},\\;\\;\\;\\;\\;\\;\\                                   B = \\begin{bmatrix}                                    4 \& 6 \& -6 \\\\                                    24 \& 34 \&-32 \\\\                                     -20\& -34\& 40\\\\                                   \\end{bmatrix}'"></div>
+                                    <div v-katex:display="'                                                                          C = \\begin{bmatrix}                                   -2 \& -1\& 6\\\\                                   8 \& 6 \&-29\\\\                                   -12\& -6\& 31\\\\                                    \\end{bmatrix} '"></div>
+
+                                    <div v-katex:display="' '"></div>
+
+                                  
+                                </li>
+                                <li>
+                                    <ol style="list-style:lower-roman">
+                                        <li>
+                                            Use the <span v-katex="'LU'"></span> results obtained in (a) above to solve the following systems of equations
+
+                                                    <ol style="list-style:upper-latin">
+                                                        <li>
+                                                            <div v-katex:display="'\\begin{array}{ccccccc} 5 x_1 \&+\& 6 x_2 \&-\& 5 x_3 &= \&60\\\\ 25 x_1 \&+\& 36 x_2 \&-\& 28 x_3 \&= \&339\\\\ - 10 x_1 \&+\& 18 x_2 \&-\& 10 x_3 \&=\& 90 \\end{array}  '"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div v-katex:display="'\\begin{array}{ccccccc} 4 x_1 \&+\& 6 x_2 \&-\& 6 x_3 \&=\& 8\\\\ 24 x_1 \&+\& 34 x_2 \&-\& 32 x_3 \&=\& 30\\\\ - 20 x_1 \&-\& 34 x_2 \&+\& 40 x_3 \&=\& -86\\\\ \\end{array} '"></div>
+                                                        </li>
+                                                        <li>
+                                                            <div v-katex:display="'                                                                  \\begin{array}{ccccccc} - 2 x_1 \&-\& x_2 \&+\& 6 x_3 \&=\& -17\\\\ 8 x_1 \&+\& 6 x_2 \&-\& 29 x_3 \&=\& 82\\\\ - 12 x_1 \&-\& 6 x_2 \&+\& 31 x_3 \&=\& -82 \\end{array}'"></div>
+                                                        </li>
+                                                    </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Use the Crout method to solve the problems in 1(a) and 1(b) above.
+                        </li>
+                        <li>
+                            Use the naive Gaussian elimination method to decompose the following matrices into <span v-katex="'LU'"></span> form and solve the corresponding system of equations.
+
+                            <ol style="list-style:lower-latin">
+                                <li style="margin-bottom:50px;">
+                                    <div v-katex:display="'A = \\begin{bmatrix} -7 \&1\& 3\& 1\\\\ 56\& -15\& -22\& -9\\\\ -42\& 27\& 14\& 6\\\\ 7\& -43\& 1\& 6\\\\ \\end{bmatrix}'"></div>
+                                    <div v-katex:display="'\\begin{array}{ccccccccc} - 7 x_1 \&+\& x_2 \&+\& 3 x_3 \&+\& x_4 \&=\& -3\\\\ 56 x_1 \&-\& 15 x_2 \&-\& 22 x_3 \&-\& 9 x_4 \&=\& 47\\\\ - 42 x_1 \&+\& 27 x_2 \&+\& 14 x_3 \&+\& 6 x_4 \&=\& -72\\\\ 7 x_1 \&-\& 43 x_2 \&+\& x_3 \&+\& 6 x_4 \&=\& 78\\\\ \\end{array}'"></div>
+                                </li>
+                                <li style="margin-bottom:50px;">
+                                    <div v-katex:display="'B =\\begin{bmatrix} -1\& 8\& 5\& -4 \\\\ 8\& -59\& -45\& 33 \\\\ -4\& 2 \&42\& -23\\\\ 3\& -49\& 2\& 14\\\\ \\end{bmatrix}'"></div>
+                                    
+                                    
+                                    <div v-katex:display="'\\begin{array}{ccccccccc} - x_1 \&+\& 8 x_2 \&+\& 5 x_3 \&-\& 4 x_4 \&=\& 5\\\\ 8 x_1 \&-\& 59 x_2 \&-\& 45 x_3 \&+\& 33 x_4 \&=\& -8\\\\ - 4 x_1 \&+\& 2 x_2 \&+\& 42 x_3 \&-\& 23 x_4 \&=\& -150\\\\ 3 x_1 \&-\& 49 x_2 \&+\& 2 x_3 \&+\& 14 x_4\& =\& -137 \\end{array}'"></div>
+                                </li>
+                                <li>
+                                    <div v-katex:display="'C = \\begin{bmatrix} 4\& 6\& 4\& 0\\\\ 20\& 27\& 14\& -1\\\\ -16\& -3\& 18\& 3\\\\ 8 \&-6\& 36\& 27\\\\ \\end{bmatrix}'"></div>
+                                    
+                                    <div v-katex:display="'\\begin{array}{ccccccccc} 4 x_1 \&+\& 6 x_2 \&+\& 4 x_3\&\& \&=\& 10\\\\ 20 x_1 \&+\& 27 x_2 \&+\& 14 x_3 \&-\& x_4 \&=\& 46\\\\ - 16 x_1 \&-\& 3 x_2 \&+\& 18 x_3 \&+\& 3 x_4 \&=\& 0\\\\ 8 x_1 \&-\& 6 x_2 \&+\& 36 x_3 \&+\& 27 x_4 \&=\& -99 \\end{array}'"></div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+
+                </div>
+
+                <!--./Exercise 6.1-->
+            </div>
+            <!--./Section 6.2-->
         </section>
     </div>
 
