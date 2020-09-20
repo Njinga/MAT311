@@ -1,6 +1,6 @@
 <template>
     <div class="unit1">
-        <section class="py-3 px-3 mx-4" style="background-color:#fff3e0">
+        <section class="py-3 px-3 mx-4 grey-text" style="background-color:#fff3e0">
             <h3 class=" h3-responsive font-weight-bold"> 1. Errors</h3>
         </section>
         <!--Section 1.1-->

@@ -8,8 +8,8 @@ import unit3 from './views/unit3.vue'
 import unit4 from './views/unit4.vue'
 import unit5 from './views/unit5.vue'
 import unit6 from './views/unit6.vue'
-import unit7 from './views/unit5.vue'
-import unit8 from './views/unit6.vue'
+import unit7 from './views/unit7.vue'
+import unit8 from './views/unit8.vue'
 Vue.use(Router)
 
 export default new Router({

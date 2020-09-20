@@ -1,6 +1,6 @@
 <template>
     <div class="unit2">
-        <section class="py-3 px-3 mx-4" style="background-color:#fff3e0">
+        <section class="py-3 px-3 mx-4 grey-text" style="background-color:#fff3e0">
             <h3 class=" h3-responsive font-weight-bold"> 2. Number Representation</h3>
         </section>
         <!--Section 2.1 -->
