@@ -236,7 +236,7 @@
                 with error <span v-katex="'O(h^2)'"></span>.
 
 
-              
+
             </div>
 
             <!--./Section 8.1-->
@@ -556,8 +556,6 @@
 
                     </div>
                     <!--./Example 8.2-->
-
-
                     <!--Exercise 8.1-->
 
                     <div class="my-4 p-3" style="background-color:#fff3e0">
@@ -572,7 +570,7 @@
                                 <div v-katex:display="'\\begin{aligned} f\'(x) \&\\approx \\frac{1}{4h}[f(x+2h)-f(x-2h)]\\\\ f\'\'(x)\&\\approx \\frac{1}{4h^2}[f(x+2h) - 2f(x) + f(x-2h)] \\end{aligned}'"></div>
 
                                 and establish the formulas for the errors in using them.
-                                
+
                             </li>
 
                             <li>
@@ -595,7 +593,7 @@
                                 Establish the errors for the following differentiation rules.
 
                                 <div v-katex:display="'\\begin{aligned} f\'\'\'(x)\&\\approx \\frac{1}{2h^3}[f(x+2h)-2f(x+h)+2f(x-h)-f(x-2h)]\\\\ f^{(4)}(x)\&\\approx \\frac{1}{h^4}[f(x+2h)-4f(x+h)+6f(x)-4f(x-h)+f(x-2h)] \\end{aligned}'"></div>
-                                
+
                             </li>
 
                             <li>
@@ -609,7 +607,7 @@
                                 Use the formula above to approximate <span v-katex="'f\'(1.9)'"></span> with <span v-katex="'f(x) = ln(x)'"></span> using <span v-katex="'h = 0.1, 0.01, 0.001.'"></span>. Compute the error in each case.
 
 
-                                
+
                             </li>
 
                             <li>
@@ -640,11 +638,11 @@
                                     </li>
 
                                 </ol>
-                               
+
                             </li>
                         </ol>
-                    
-                       
+
+
                     </div>
                     <!--./Exercise 8.1-->
 
@@ -654,6 +652,8 @@
             </div>
             <!--./Section 8.2-->
         </section>
+
+        
     </div>
 
 </template>
@@ -661,8 +661,10 @@
 <script>
 
 
-export default {
-  name: 'unit8'
+ 
+    export default {
+    name:'unit8'
+  
 
 }
 </script>
