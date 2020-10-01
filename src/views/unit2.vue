@@ -1786,4 +1786,9 @@ m330 0 l0 -490 -155 0 -155 0 0 490 0 490 155 0 155 0 0 -490z m2610 0 l0
     move-right {
         margin-left: 20px;
     }
+
+
+    .katex {
+        font-size: clamp(0.75rem, 0.46875rem+0.78125vw, 1.25rem);
+    }
 </style>

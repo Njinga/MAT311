@@ -70,7 +70,7 @@
 
                 </div>
                 <!--./Theorem 3.2-->
-                <!--Example 1-->
+                <!--Example 3.1-->
                 <div style="background-color: #e2e3e5" class="my-3 mb-4 p-3">
                     <span class="font-weight-bold">Example 3.1</span>
 
@@ -95,7 +95,7 @@
                     </ol>
 
                 </div>
-                <!--./Exapmle 1-->
+                <!--./Exapmle 3.1-->
                 <!--Section 3.1.1-->
                 <div class="my-4">
                     <h5 class="h5-responsive mt-4 mb-2">
@@ -108,31 +108,31 @@
                     <deep>Bisection Method Algorithm to find root in <span v-katex="'[a,b]'"></span></deep>
 
                     <ol>
-                        <li>
+                        <li style="margin-bottom:10px">
                             Bisect <span v-katex="'[a,b]'"></span> into two halves <span v-katex="'[a,c]'"></span>
                             and <span v-katex="'[c,b]'"></span> where
                             <span v-katex="'\\displaystyle{c=\\frac{a + b}{2}}'"></span>
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             Identify the interval
                             containing the root by checking
                             the signs of <span v-katex="'f(a)f(c)'"></span> and <span v-katex="'f(c)f(b)'"></span>.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             If <span v-katex="'f(a)f(c) < 0'"></span> then
                             interval <span v-katex="'[a,c]'"></span> has the
                             root. Otherwise the other
                             interval <span v-katex="'[c,b]'"></span> has
                             the root.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             Bisect the new interval that contains the root and repeat steps 1-3.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             At each step take the midpoint of the interval as
                             the most updated approximation of the root.
                         </li>
-                        <li>
+                        <li style="margin-bottom:10px">
                             Stop the procedure after a specified number of iterations
                             or when the width of the interval containing the root is
                             less than a given tolerance <span v-katex="'\\varepsilon'"></span>.
@@ -294,117 +294,10 @@ c25 0 46 5 46 10 0 6 -14 10 -32 10 l-32 0 37 34 c20 18 37 38 37 43 0 20 -33
                         value of the root to within a tolerance
                         of <span v-katex="'\\varepsilon'"></span>)
 
-                        <div class="container mb-4">
-                            <div class="row">
-                                <div class="col th">iter.#</div>
-                                <div class="col th">
-                                    <div v-katex:display="'a'"></div>
-                                </div>
-                                <div class="col th">
-                                    <div v-katex:display="'c'"></div>
-                                </div>
-                                <div class="col th">
-                                    <div v-katex:display="'b'"></div>
-                                </div>
-                                <div class="col th">
-                                    <div v-katex:display="'f(a)'"></div>
-                                </div>
-                                <div class="col th">
-                                    <div v-katex:display="'f(c)'"></div>
-                                </div>
-                                <div class="col th">
-                                    <div v-katex:display="'f(b)'"></div>
-                                </div>
-                                <div class="col th">
-                                    <div v-katex:display="'\\varepsilon'"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col th">1</div>
-                                <div class="col th"> 0.0000</div>
-                                <div class="col th">1.0000000</div>
-                                <div class="col th"> 2.000000</div>
-                                <div class="col th"> -1.0000</div>
-                                <div class="col th"> 0.7183</div>
-                                <div class="col th"> 5.3891</div>
-                                <div class="col th"> 2.0000000</div>
-                            </div>
-                            <div class="row">
-                                <div class="col th">2</div>
-                                <div class="col th">  0.0000</div>
-                                <div class="col th">0.5000000</div>
-                                <div class="col th">1.000000</div>
-                                <div class="col th">  -1.0000</div>
-                                <div class="col th">  -0.3513</div>
-                                <div class="col th"> 0.7183</div>
-                                <div class="col th"> 1.0000000</div>
-                            </div>
-                            <div class="row">
-                                <div class="col th">3</div>
-                                <div class="col th"> 0.5000  </div>
-                                <div class="col th">0.7500000  </div>
-                                <div class="col th"> 1.000000    </div>
-                                <div class="col th">-0.3513   </div>
-                                <div class="col th">  0.1170   </div>
-                                <div class="col th">  0.7183  </div>
-                                <div class="col th"> 0.5000000</div>
-                            </div>
-                            <div class="row">
+                           <div v-katex:display="'\\begin{array}{|c|c|c|c|c|c|c|c|}\\hline                               \\text{iter.} \\# \& a \& c \& b \& f(a) \& f(c) \& f(b) \& \\text{Error Bound} (\\varepsilon)\\\\ \\hline                                1\& 0.0000 \&1.0000000\& 2.000000\& -1.0000\& 0.7183\& 5.3891 \& 2.0000000 \\\\ \\hline                                2\& 0.0000 \&0.5000000\& 1.000000\& -1.0000\& -0.3513\& 0.7183 \& 1.0000000 \\\\ \\hline                                3\& 0.5000 \&0.7500000\& 1.000000\& -0.3513\& 0.1170\& 0.7183 \& 0.5000000 \\\\ \\hline                               4\& 0.5000 \&0.6250000\& 0.750000\& -0.3513\& -0.1318\& 0.1170 \& 0.2500000 \\\\ \\hline                               5\& 0.6250 \&0.6875000\& 0.750000\& -0.1318\& -0.0113\& 0.1170 \& 0.1250000 \\\\ \\hline                               6\& 0.6875 \&0.7187500\& 0.750000\& -0.0113\& 0.0519\& 0.1170 \& 0.0625000 \\\\ \\hline                                7\& 0.6875 \&0.7031250\& 0.718750\& -0.0113\& 0.0201\& 0.0519 \& 0.0312500 \\\\ \\hline                               8\& 0.6875 \& 0.6953125\& 0.703125\& -0.0113\& 0.0043\& 0.0201 \& 0.0156250 \\\\ \\hline                                \\end{array}'"></div>
 
-                                <div class="col th">4</div>
-                                <div class="col th"> 0.5000</div>
-                                <div class="col th">0.6250000</div>
-                                <div class="col th">0.750000</div>
-                                <div class="col th">-0.3513</div>
-                                <div class="col th">-0.1318</div>
-                                <div class="col th">0.1170</div>
-                                <div class="col th"> 0.2500000</div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col th">5</div>
-                                <div class="col th">   0.6250</div>
-                                <div class="col th">0.6875000</div>
-                                <div class="col th"> 0.750000</div>
-                                <div class="col th">-0.1318</div>
-                                <div class="col th">-0.0113</div>
-                                <div class="col th">0.1170</div>
-                                <div class="col th">0.1250000</div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col th">6</div>
-                                <div class="col th">  0.6875</div>
-                                <div class="col th">0.7187500</div>
-                                <div class="col th">0.750000</div>
-                                <div class="col th">-0.0113</div>
-                                <div class="col th">           0.0519     </div>
-                                <div class="col th">0.1170</div>
-                                <div class="col th"> 0.0625000</div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col th">7</div>
-                                <div class="col th"> 0.6875 </div>
-                                <div class="col th">0.7031250</div>
-                                <div class="col th"> 0.718750 </div>
-                                <div class="col th">-0.0113     </div>
-                                <div class="col th"> 0.0201</div>
-                                <div class="col th">0.0519</div>
-                                <div class="col th">0.0312500</div>
-                            </div>
-                            <div class="row">
-                                <div class="col th">8</div>
-                                <div class="col th">0.6875</div>
-                                <div class="col th">0.6953125</div>
-                                <div class="col th">0.703125 </div>
-                                <div class="col th"> -0.0113</div>
-                                <div class="col th">0.0043</div>
-                                <div class="col th">0.0201</div>
-                                <div class="col th">0.0156250</div>
-                            </div>
-                        </div>
-                        where  <span v-katex="'\\varepsilon'"></span> = Error bound
+                      
+                        
                     </div>
                     <!--./Exapmle 3.2-->
                     The results given above were generated using the following matlab codes.<br />
@@ -614,8 +507,8 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
                     Observe that the successive interval widths form the pattern
 
 
-                    <div v-katex:display="'b_1 - a_1 = \\frac{b_0 - a_0}{2}'"></div>
-                    <div v-katex:display="'~~~~~~~~~~~~~~~~~~~b_2 - a_2 = \\frac{b_1 - a_1}{2} = \\frac{b_0 - a_0}{2^2}'"></div>
+                    <div v-katex:display="' \\begin{aligned}b_1 - a_1 \&= \\frac{b_0 - a_0}{2}\\\\b_2 - a_2 \&= \\frac{b_1 - a_1}{2} = \\frac{b_0 - a_0}{2^2}\\\\ \\end{aligned}'"></div>
+                    
 
                     It is left as an exercise for you to use mathematical induction to show that
 
@@ -688,10 +581,9 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
                         needed to compute the root of a function
                         <span v-katex="'f(x)'"></span> to a precision of <span v-katex="'\\varepsilon  = 0.01'"></span> on the interval [0,2]<br>
                         <deep>Answer.</deep><span v-katex="'~~a = 0'"></span> and <span v-katex="'b = 2'"></span>.
-                        <div v-katex:display="'\\frac{b - a}{2^{n+1}} < \\varepsilon'"></div>
-                        <div v-katex:display="'~~~~\\frac{2-0}{2^{n+1}} < 0.01'"></div>
-                        <div v-katex:display="'~~~~~~~~2^n > 100'"></div>
-                        <div v-katex:display="'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~n > \\frac{\\log 100}{\\log 2} = 6.64'"></div>
+                        <div v-katex:display="'\\begin{aligned} \\frac{b - a}{2^{n+1}} \& < \\varepsilon \\\\ \\frac{2-0}{2^{n+1}} \& < 0.01 \\\\  2^n \& > 100 \\\\  n \& > \\frac{\\log 100}{\\log 2} = 6.64 \\end{aligned}'"></div>
+
+
 
                         Thus no more than <span v-katex="'n = 7'"></span> iterations would be needed to
                         achieve the convergence to within 0.01.
@@ -737,83 +629,83 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
                     <h4 class="h4-responsive">Exercise 3.1  <deep>Exercises on the Bisection Method</deep></h4>
 
                     <ol>
-                        <li>
+                        <li style="margin-bottom:15px">
                             Apply the bisection method to the equation  <span v-katex="'\\sin x - 0.75 = 0'"></span> in the interval [0.8, 0.9] and
                             try to determine the actual root with three correct decimals.
                         </li>
-                        <li>
+                        <li style="margin-bottom:15px">
                             Determine the first four approximations of the actual root of the equation  <span v-katex="'x^3 -\\frac{1}{2}'"></span>
                             in the interval [0,1] by the bisection method.
                         </li>
-                        <li>
+                        <li style="margin-bottom:15px">
                             Take 4 steps of the bisection method to estimate a root of  <span v-katex="'\\sin x - 0.50'"></span> starting with the intervals (a) [0,1] and (b) [2, 3]. Estimate
                             the error in your result.
                         </li>
-                        <li>
+                        <li style="margin-bottom:15px">
                             How many steps of the bisection method are required to bracket
                             the root in an interval of length  <span v-katex="'\\leq 10^{-3}'"></span> when the initial
                             nontrivial bracket is  <span v-katex="'[0, \\pi]'"></span>?
                         </li>
-                        <li>
+                        <li style="margin-bottom:15px">
                             Show that  <span v-katex="'f(x) = x^3 - x - 1'"></span> has exactly one zero in the
                             interval [1, 2]. Approximate the zero with absolute error
                             <span v-katex="'\\leq 5\\times 10^{-3}'"></span> using the bisection method.
                         </li>
-                        <li>
+                        <li style="margin-bottom:15px">
                             Use the bisection method to find  <span v-katex="'\\sqrt{3}'"></span> with relative
                             error  <span v-katex="'\\leq 5 \\times 10^{-3}'"></span>.
                         </li>
-                        <li>
+                        <li style="margin-bottom:15px">
                             Consider the function  <span v-katex="'f(x) = x^3 +4x^2 - 10'"></span>.
                             <ol style="list-style:lower-latin;">
-                                <li>
+                                <li style="margin-bottom:10px">
                                     Show that  <span v-katex="'f(x)'"></span> has exactly one root in [1, 2].
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     By performing 4 iterations of the bisection method, show that this root lies
                                     in the <br /> interval [1.3125, 1.375].
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     How many iterations would be required to locate this zero to a tolerance of
                                     <span v-katex="'10^{-5}'"></span>?
                                 </li>
                             </ol>
                             <br><br>
                         </li>
-                        <li>
+                        <li style="margin-bottom:15px">
                             <p class="text-center"> MATLAB Exercises</p>
                             Use the Bisection method to find solutions accurate to within <span v-katex="'10^{-5}'"></span> for the following problems.
                             Present your results in tabular form showing <span v-katex="'a,c,b,f(a),f(c),f(b)'"></span> and the error bound <span v-katex="'\\varepsilon'"></span> at each
                             step of the iteration.
                             <ol style="list-style:lower-latin">
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle x - 2^{-x} = 0  ~~\\text{for }~~ 0\\leq x \\leq 1'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle  e^x - x^2 + 3x - 2 = 0~~\\text{for }~~ 0 \\leq x \\leq 1'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle  2x\\cos(2x) - (x+1)^2 = 0 ~~\\text{for}~~-3 \\leq x \\leq -2'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle x\\cos x - 2x^2 + 3x - 1 = 0 ~~\\text{for}~~ 0.2 \\leq x \\leq 0.3'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle 3x - e^x = 0 ~~\\text{for}~~1 \\leq x \\leq 2'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle x + 3\\cos x - e^x = 0 ~~\\text{for}~~0 \\leq x \\leq 1'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle x^2 - 4x + 4 - \\ln x =0~~\\text{for}~~ 1 \\leq x \\leq 2'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle x + 1 - 2\\sin \\pi x = 0 ~~\\text{for}~~ 0 \\leq x \\leq 0.5'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle e^x -2 - \\cos(e^x-2)= 0 ~~\\text{for}~~ 0.5 \\leq x \\leq 1.5'"></span>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:10px">
                                     <span v-katex="'~~~~~~\\displaystyle x^3 - 25 = 0 ~~\\text{for}~~ 2.5 \\leq x \\leq 3.5'"></span>
                                 </li>
 
@@ -1059,8 +951,8 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
                         Given <span v-katex="'f(x) = x^3 - 7x  + 2 = 0'"></span> in [0,1].
                         Find a sequence that <span v-katex="'\\{x_n\\}'"></span> that converges to the root of <span v-katex="'f(x)=0'"></span> in [0,1].<br /><br />
 
-                        <deep>Answer:</deep> Rewrite <span v-katex="'f(x)=0'"></span> as <span v-katex="'x = \\frac{1}{7}(x^3+2)'"></span>. Then <span v-katex="'g(x)  = \\frac{1}{7}(x^3+2)'"></span>
-                        and <span v-katex="'g\'(x)=\\frac{3x^2}{7} < \\frac{3}{7}'"></span> for all <span v-katex="'x \\in [0,1]'"></span>. Hence, by the FPT the sequence
+                        <deep>Answer:</deep> Rewrite <span v-katex="'f(x)=0'"></span> as <span v-katex="'x =\\displaystyle{ \\frac{1}{7}(x^3+2)}'"></span>. Then <span v-katex="'g(x)  = \\displaystyle {\\frac{1}{7}(x^3+2)}'"></span>
+                        and <span v-katex="'g\'(x)=\\displaystyle{\\frac{3x^2}{7} < \\frac{3}{7}}'"></span> for all <span v-katex="'x \\in [0,1]'"></span>. Hence, by the FPT the sequence
                         <span v-katex="'\\{x_n\\}'"></span> defined by
 
 
@@ -1079,7 +971,7 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
 
 
                         <deep>Answer:</deep> Note <span v-katex="'f(1) = -1'"></span> and <span v-katex="'f(2) = 5'"></span>, Therefore by the IVT a root exists on (1,2).
-                        Set <span v-katex="'g(x)=(1 + x)^{\\frac{1}{3}}'"></span>. Note that <span v-katex="'g\'(x)=\\frac{1}{3}(1+x)^{-2/3}'"></span>. So, on (1,2) we have
+                        Set <span v-katex="'g(x)=(1 + x)^{1/3}'"></span>. Note that <span v-katex="'g\'(x)=\\displaystyle{\\frac{1}{3}(1+x)^{-2/3}}'"></span>. So, on (1,2) we have
 
                         <div v-katex:display="'\\frac{1}{3(1+2)^{2/3}} < g\'(x) < \\frac{1}{3(1+1)^{2/3}}'"></div>
 
@@ -1090,29 +982,16 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
 
                         and <span v-katex="'|g\'(x)| \\leq K < 1'"></span> on (1,2). By the FPT the sequence
 
-                        <div v-katex:display="'x_{n+1}  = (1+x_n)^{\\frac{1}{3}}'"></div>
+                        <div v-katex:display="'x_{n+1}  = (1+x_n)^{1/3}'"></div>
 
                         will converge to a fixed point on (1,2).
 
                     </div>
                     <!--./Example 3.6-->
 
-                    <div v-katex:display="'~~~~~~~~~~~~~~x_{n+1} = (1+x_n)^{\\frac{1}{3}}~,~~~~~x_0 = 1.3'"></div>
-                    <div v-katex:display="'x_{1} =           1.320006122'"></div>
-                    <div v-katex:display="'x_{2} =          1.323822354'"></div>
-                    <div v-katex:display="' x_3 =          1.324547818'"></div>
-                    <div v-katex:display="' x_4     =     1.324685639'"></div>
-                    <div v-katex:display="' x_5     =     1.324711818'"></div>
-                    <div v-katex:display="'  x_6       =   1.324716791'"></div>
-                    <div v-katex:display="'   x_7      =    1.324717736'"></div>
-                    <div v-katex:display="'x_8      =    1.324717915'"></div>
-                    <div v-katex:display="' x_9      =    1.324717949'"></div>
-                    <div v-katex:display="' x_{10}      =    1.324717956'"></div>
-                    <div v-katex:display="'  x_{11}      =    1.324717957'"></div>
-                    <div v-katex:display="'  x_{12}      =    1.324717957'"></div>
-                    <div v-katex:display="'  x_{13}      =    1.324717957'"></div>
-                    <div v-katex:display="' x_{14}      =    1.324717957'"></div>
-                    <div v-katex:display="'x_{15}      =    1.324717957'"></div>
+                    <div v-katex:display="'\\begin{aligned} x_{n+1} \&= (1+x_n)^{\\frac{1}{3}}~,~~~~~x_0 = 1.3\\\\         x_{1} \&=           1.320006122\\\\         x_{2} \&=         1.323822354 \\\\         x_3 \&=          1.324547818\\\\         x_4     \&=     1.324685639\\\\         x_5     \&=     1.324711818\\\\         x_6       \&=   1.324716791\\\\         x_7      \&=    1.324717736\\\\        x_8      \&=    1.324717915\\\\        x_9      \&=    1.324717949\\\\       x_{10}      \&=    1.324717956\\\\       x_{11}      \&=    1.324717957\\\\       x_{12}      \&=    1.324717957\\\\       x_{13}      \&=    1.324717957\\\\        x_{14}      \&=    1.324717957\\\\        x_{15}      \&=    1.324717957\\\\ \\end{aligned}'"></div>
+                    
+                    
 
                     The root is <span v-katex="'x = 1.324717957'"></span>.<br><br />
 
@@ -1155,12 +1034,8 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
 
                         <br /><br />
 
-                        <div v-katex:display="'  x_1 =            1.565085'"></div>
-                        <div v-katex:display="' x_2 =             1.793573 '"></div>
-                        <div v-katex:display="' x_3 =            1.885944'"></div>
-                        <div v-katex:display="'    x_4 =             1.922848'"></div>
-                        <div v-katex:display="'  x_5 =           1.937508'"></div>
-                        <div v-katex:display="'  x_5 =          1.937508'"></div>
+                        <div v-katex:display="'\\begin{aligned}       x_1 \&=             1.565085 \\\\		 x_2 \&=             1.793573 \\\\        x_3 \&=           1.885944\\\\         x_4 \&=             1.922848\\\\         x_5 \&=            1.937508\\\\         x_6 \&=            1.943317\\\\ \\end{aligned}'"></div>
+                        
 
                         Thus  <span v-katex="'x_6 = 1.943317'"></span> is accurate to within <span v-katex="'10^{-2}'"></span>. The results for this example can be computed
                         manually using a calculator or the following MATLAB codes can be used.
@@ -1697,10 +1572,7 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
                         positive root to the equation <span v-katex="'f(x)=a - x^2'"></span>. Formulating the Newton's method for solving this
                         expression yields.
 
-                        <div v-katex:display="'x_{n+1} = x_n - \\frac{f(x_n)}{f\'(x_n)}~~~~~~~~~~~'"></div>
-                        <div v-katex:display="' = x_n - \\frac{a - x_n^2}{-2x_n}'"></div>
-                        <div v-katex:display="'   = \\frac{2x_n^2 + a - x_n^2}{2x_n}'"></div>
-                        <div v-katex:display="'= \\frac{1}{2}\\left(x_n + \\frac{a}{x_n} \\right) '"></div>
+                        <div v-katex:display="'\\begin{aligned}x_{n+1}\&= x_n - \\frac{f(x_n)}{f\'(x_n)}\\\\      \&= x_n - \\frac{a - x_n^2}{-2x_n}\\\\       \&= \\frac{2x_n^2 + a - x_n^2}{2x_n}\\\\       \&= \\frac{1}{2}\\left(x_n + \\frac{a}{x_n} \\right) \\end{aligned}'"></div>
 
 
                     </div>
@@ -1717,22 +1589,17 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
 
                         The first derivative is <span v-katex="'f\'(x) = 3x^2 - 1'"></span>. Thus the iteration formula is
 
-                        <div v-katex:display="'~~~~~~~~~~x_{n+1} = x_n - \\frac{(x_n^3 - x_n - 1)}{3x_n^2-1}'"></div>
-                        <div v-katex:display="' = \\frac{2x_n^3  + 1}{3x_n^2-1}'"></div>
+                        <div v-katex:display="'\\begin{aligned} x_{n+1} \&= x_n - \\frac{(x_n^3 - x_n - 1)}{3x_n^2-1}\\\\		\&= \\frac{2x_n^3  + 1}{3x_n^2-1} \\end{aligned}'"></div>
+                       
 
-                        <div class="container text-center">
+                        
 
 
-                            <span v-katex="'n~~~~~~~x_n~~~~~~~~~~~~~~~~'"></span><br />
-                            <hr class="blue mb-0 mt-0 " style="width:150px">
-                            <span v-katex="'1~~~~~~~1.300000000'"></span><br />
-                            <span v-katex="'2~~~~~~~1.325307125'"></span><br />
-                            <span v-katex="'3~~~~~~~1.324718280'"></span><br />
-                            <span v-katex="'4~~~~~~~1.324717957'"></span><br />
-                            <span v-katex="'5~~~~~~~1.324717957'"></span><br />
+                            
+                            <div v-katex:display ="'\\begin{array}{cc} n\&~~~~~~ x_n \\\\ \\hline		 1\&          1.300000000 \\\\         2\&          1.325307125 \\\\         3\&          1.324718280 \\\\         4\&          1.324717957 \\\\         5\&          1.324717957 \\\\ \\end{array}'"></div><br />
+                           
 
-                        </div>
-
+                        
 
                     </div>
                     <!--./Example 3.10-->
@@ -1801,8 +1668,8 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
 
 
                         This leads to
-                        <div v-katex:display="'~~~~~~~~~~~~~~~~x_{n+1} - \\alpha = \\frac{(\\alpha - x_n)^2}{2}\\frac{f\'\'(\\xi_n)}{f\'(x_n)}'"></div>
-                        <div v-katex:display="'\\frac{x_{n+1} - \\alpha}{(x_{n} - \\alpha)^2}= \\frac{1}{2}\\frac{f\'\'(\\xi_n)}{f\'(x_n)}'"></div>
+                        <div v-katex:display="'  \\begin{aligned} x_{n+1} - \\alpha \&= \\frac{(\\alpha - x_n)^2}{2}\\frac{f\'\'(\\xi_n)}{f\'(x_n)}\\\\   \\frac{x_{n+1} - \\alpha}{(x_{n} - \\alpha)^2}\&= \\frac{1}{2}\\frac{f\'\'(\\xi_n)}{f\'(x_n)}  \\end{aligned}'"></div>
+                        
 
                         The initial assumptions which permittted the assertions that <span v-katex="'|f\'(\\alpha)| > \\gamma > 0'"></span>
                         and <span v-katex="'|f\'\'(\\xi_n)| < M'"></span> in some sufficiently small neighbourhood of <span v-katex="'\\alpha'"></span> show that Newton's method
@@ -2034,46 +1901,31 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
 
                     Set
 
-                    <div v-katex:display="'f(x_n) = x_n - x_n^{1/3} - 2 '"></div>
-                    <div v-katex:display="' f\'(x_n) = 1 - \\frac{1}{3}x_{n}^{-2/3}'"></div>
+                    <div v-katex:display="'\\begin{aligned} f(x_n) \&= x_n - x_n^{1/3} - 2 \\\\ f\'(x_n) \&= 1 - \\frac{1}{3}x_{n}^{-2/3} \\end{aligned} '"></div>
+                    
 
                     The iteration formula is
 
                     <div v-katex:display="' x_{n+1}=x_n - \\frac{x_n - x_n^{1/3} - 2}{1 - \\frac{1}{3}x_{n}^{-2/3}}'"></div>
 
-                    <div class="text-center">
-                        <span v-katex="'n~~~~~~~~~~~x_n~~~~~~~~~~~~~~~~~~~~~~~~f\'(x_n)~~~~~~~~~~~~~~~~~~~~~~~f(x_n)~~~~~~~~~~~~~'"></span><br />
-                        <hr class="blue mb-1 mt-0 " style="width:500px">
-                        <hr class="blue mb-1 mt-1 " style="width:500px">
-                        <span v-katex="'0~~~~~~~3.000000000~~~~0.839750048~~~~-4.422495703 \\times 10^{-1}'"></span><br />
-                        <span v-katex="'1~~~~~~~3.526644293 ~~~~0.856129758~~~~4.506791821 \\times 10^{-3}~~~~'"></span><br />
-                        <span v-katex="'2~~~~~~~3.521380147~~~~0.855986412~~~~~3.771414137 \\times 10^{-7}~~~'"></span><br />
-                        <span v-katex="'3~~~~~~~3.521379707~~~~0.855986400~~~~2.664535259 \\times 10^{-15}~~~'"></span><br />
-                        <span v-katex="'4~~~~~~3.521379707~~~~    0.855986400~~~~0.00000000000~~~~~~~~~~~~~'"></span><br /><br />
+                    
+                        <div v-katex:display ="'\\begin{array}{cccl}       n \& x_n \& f\'(x_n) \& f(x_n) \\\\ \\hline\\hline	     0  \&~~~     3.000000000~~~  \&~~~        0.839750048~~~~  \&-4.422495703 \\times 10^{-1}\\\\        1  \&        3.526644293  \&        0.856129758  \&   4.506791821 \\times 10^{-3}\\\\        2  \&        3.521380147  \&        0.855986412  \&   3.771414137 \\times 10^{-7}\\\\         3  \&        3.521379707  \&        0.855986400  \&   2.664535259 \\times 10^{-15}\\\\        4  \&        3.521379707  \&        0.855986400  \&   0.00000000000\\end{array}'"></div><br />
+                
 
 
-                    </div>
+                   
                     <deep>Secant Method solution</deep><br />
                     Set
-                    <div v-katex:display="'f(x_n) = x_n - x_n^{1/3} - 2  '"></div>
-                    <div v-katex:display="' f(x_{n-1}) = x_{n-1} - x_{n-1}^{1/3} - 2'"></div>
+                    <div v-katex:display="'\\begin{aligned} f(x_n) \&= x_n - x_n^{1/3} - 2 \\\\ f(x_{n-1}) \&= x_{n-1} - x_{n-1}^{1/3} - 2 \\\\ \\end{aligned}'"></div>
+                    
 
 
                     <div v-katex:display="' x_{n+1} = x_n - f(x_n)\\frac{(x_n - x_{n-1})}{\\displaystyle f(x_n) - f(x_{n-1})}'"></div>
 
 
-                    <div class="text-center">
-                        <span v-katex="'n~~~~~~~~~~~x_n~~~~~~~~~~~~~~~~~~~~~~~~f\'(x_n)~~~~~~~~~~~~~~~~~~~~~~~f(x_n)~~~~~~~~~~~~~'"></span><br />
-                        <hr class="blue mb-1 mt-0 " style="width:500px">
-                        <hr class="blue mb-1 mt-1 " style="width:500px">
-                        <span v-katex="'0~~~~~~~4.000000000~~~~3.000000000~~~~-4.422495703 \\times 10^{-1}'"></span><br />
-                        <span v-katex="'1~~~~~~~3.000000000~~~~3.517342618~~~~-3.455470954 \\times 10^{-3}'"></span><br />
-                        <span v-katex="'2~~~~~~~3.517342618~~~~3.521416653~~~~~3.162504256 \\times 10^{-5}~~~~'"></span><br />
-                        <span v-katex="'~3~~~~~~~3.521416653~~~~3.521379704~~~~-2.034715063 \\times 10^{-9}'"></span><br />
-                        <span v-katex="'~~~4~~~~~~~3.521379704~~~~3.521379707~~~~-1.332267630 \\times 10^{-15}'"></span><br />
-                        <span v-katex="'~~~5~~~~~~~3.521379707~~~~3.521379707~~~~0.000000000~~~~~~~~~~~~~~~~~~~'"></span><br /><br />
-
-                    </div>
+               
+                        <div v-katex:display="'\\begin{array}{cccl}        n \& x_{n-1} \& x_n \& f(x_n) \\\\ \\hline\\hline        0 \&~~~         4.000000000~~~ \&~~~          3.000000000~~~ \&    -4.422495703 \\times 10^{-1}\\\\        1 \&         3.000000000 \&          3.517342618 \&   -3.455470954 \\times 10^{-3}\\\\        2 \&         3.517342618 \&          3.521416653 \&    3.162504256 \\times 10^{-5}\\\\        3 \&         3.521416653 \&          3.521379704 \&   -2.034715063 \\times 10^{-9}\\\\        4 \&         3.521379704 \&          3.521379707 \&   -1.332267630 \\times 10^{-15} \\\\         5 \&         3.521379707 \&          3.521379707 \&    0.000000000  \\\\ \\end{array}'"></div><br />
+                 
 
 
                     We observe that the Secant method converges almost as quickly as the Newton's method.
@@ -2103,7 +1955,7 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
 
                 <!--Exercise 3.4-->
                 <div class="my-3 p-3" style="background-color:#fff3e0">
-                    <h4 class="h4-responsive">Exercise 3.4  <deep>Exercises on Secant method</deep></h4>
+                    <h6 class="h4-responsive">Exercise 3.4  <deep>Exercises on Secant method</deep></h6>
 
                     <ol>
                         <li>
@@ -2112,16 +1964,16 @@ l30 12 -65 22 c-45 15 -59 17 -46 7 18 -13 -275 -15 -2493 -15 -2233 0 -2512
       problems. Use the end points of the given
       intervals as <span v-katex="'x_0'"></span>, <span v-katex="'x_1'"></span>.
                             <ol style="list-style:lower-latin">
-                                <li>
+                                <li style="margin-bottom:15px">
                                     <div v-katex="'~~~\\displaystyle{e^x  + 2^{-x} + 2\\cos x - 6 = 0 ,~~~~\\text{ for } 1 \\leq x \\leq 2}'"></div>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:15px">
                                     <div v-katex="'~~~\\displaystyle{\\ln (x - 1) + \\cos (x - 1) = 0 ,~~~~\\text{ for } 1.3 \\leq x \\leq 2}'"></div>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:15px">
                                     <div v-katex="'~~~\\displaystyle{2x\\cos 2x - (x-2)^2 = 0 ,~~~~\\text{ for } 2 \\leq x \\leq 3}'"></div>
                                 </li>
-                                <li>
+                                <li style="margin-bottom:15px">
                                     <div v-katex="'~~~\\displaystyle{(x - 2)^2 - \\ln x = 0 ,~~~~\\text{ for } 1 \\leq x \\leq 2}'"></div>
                                 </li>
                                 <li>

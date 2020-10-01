@@ -18,49 +18,7 @@
 
 
                 <!--Table-->
-                <div class="table-responsive table-stripped" style="width:50%;">
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="">
-                                    Temperature
-                                </th>
-                                <th>
-                                    <span v-katex="'0^o'"></span>
-                                </th>
-                                <th>
-                                    <span v-katex="'5^o'"></span>
-                                </th>
-                                <th>
-                                    <span v-katex="'10^o'"></span>
-                                </th>
-                                <th>
-                                    <span v-katex="'14^o'"></span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    viscosity
-                                </td>
-                                <td>
-                                    <span v-katex="'1.792'"></span>
-                                </td>
-                                <td>
-                                    <span v-katex="' 1.519'"></span>
-                                </td>
-                                <td>
-                                    <span v-katex="'1.308'"></span>
-                                </td>
-                                <td>
-                                    <span v-katex="'1.140'"></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <div v-katex:display="'\\begin{array}{c|c|c|c|c} \\textrm{Temperature } \& 0^o \& 5^o \& 10^o \& 14^o \\\\ \\hline \\textrm{Viscosity  } \& 1.792 \& 1.519 \& 1.308 \& 1.140 \\\\ \\end{array}'"></div>
                 <!--./Table-->
                 From this table, how can we estimate a reasonable value for the viscosity at a temperature of <span v-katex="'8^o'"></span> ?
                 The method of <deep>Polynomial Interpolation</deep> is used to find polynomial that passes assumes the values
@@ -69,51 +27,7 @@
                 <deep>Interpolation Problem Statement</deep><br />
                 Given <span v-katex="'(n+1)'"></span> distinct points as shown in the table below
 
-
-                <div class="table-responsive table-stripped" style="width:50%;">
-
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="">
-                                    <span v-katex="'x'"></span>
-                                </th>
-                                <th>
-                                    <span v-katex="'x_1'"></span>
-                                </th>
-                                <th>
-                                    <span v-katex="'x_2'"></span>
-                                </th>
-                                <th>
-                                    <span v-katex="'\\dots'"></span>
-                                </th>
-                                <th>
-                                    <span v-katex="'x_n'"></span>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span v-katex="'y'"></span>
-                                </td>
-                                <td>
-                                    <span v-katex="'y_1'"></span>
-                                </td>
-                                <td>
-                                    <span v-katex="'y_2'"></span>
-                                </td>
-                                <td>
-                                    <span v-katex="'\\dots'"></span>
-                                </td>
-                                <td>
-                                    <span v-katex="'y_n'"></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
+                <div v-katex:display="'\\begin{array}{c|c|c|c|c} x \& x_0 \& x_1 \& \\cdots \& x_n \\\\ \\hline y \& y_0 \& y_1 \& \\cdots \& x_n  \\end{array}'"></div>
 
                 we want to find a polynomial that is defined
                 for all  <span v-katex="'x'"></span>, and takes on the corresponding value
@@ -168,13 +82,10 @@
                 <div class="container">
                     <div class=" row">
                         <div class="col">
-                            <div v-katex:display="'P_n(x_0) = f_0 = a_0 + a_1 x_0 + a_2x_0^2 + \\ldots + a_nx_0^n'"></div>
-                            <div v-katex:display="'P_n(x_1) = f_1 = a_0 + a_1 x_1 + a_2x_1^2 + \\ldots + a_nx_1^n'"></div>
-                            <div v-katex="'~~~~~~~~~~~~~~~~~\\vdots~~~~~~~~~~~~~~~~~  \\vdots \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;  \\vdots'"></div>
-                            <div v-katex:display="'P_n(x_n) = f_n = a_0 + a_1 x_n + a_2x_n^2 + \\ldots + a_nx_n^n '"></div>
-                        </div>
+                            <div v-katex:display="'\\begin{array}{ccccc} P_n(x_0) \&=\& f_0\& =\& a_0 + a_1 x_0 + a_2x_0^2 + \\ldots + a_nx_0^n \\\\ P_n(x_1) \&=\& f_1\& =\& a_0 + a_1 x_1 + a_2x_1^2 + \\ldots + a_nx_1^n\\\\ \\vdots \& \& \\vdots\& \& \\vdots \\\\ P_n(x_n) \&=\& f_n\& =\& a_0 + a_1 x_n + a_2x_n^2 + \\ldots + a_nx_n^n \\end{array}'"></div>
+                         </div>
                         <div class="col">
-                            <div v-katex:display="'~~~~'"></div>
+                            
                             <div v-katex:display="'~~~~'"></div>
                             <div v-katex:display="'(4.1)'"></div>
                         </div>
